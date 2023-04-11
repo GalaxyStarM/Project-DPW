@@ -1,5 +1,4 @@
-
-.footer-title{
+.footer-title {
   border-bottom-width: 2px;
   margin-bottom: 15px;
   border-bottom-style: solid;
@@ -7,8 +6,7 @@
   border-left: 70px;
 }
 
-
-.clear{
+.clear {
   display: block;
   clear: both;
   visibility: hidden;
@@ -17,34 +15,32 @@
   zoom: 1;
 }
 
-.footer-container{
-
+.footer-container {
   background-color: #14274e;
 }
 
-.footer-title{
-  font-family: 'Open Sans';
+.footer-title {
+  font-family: "Open Sans";
   text-align: center;
   src: url(OpenSans/static/OpenSans/OpenSans-Bold.ttf);
   color: #ffff;
 }
 
-
 @font-face {
-  font-family: 'Open Sans'; 
-  src: url('OpenSans/static/OpenSans/OpenSans-Bold.ttf');
+  font-family: "Open Sans";
+  src: url("OpenSans/static/OpenSans/OpenSans-Bold.ttf");
 }
 
-ul.navbar-atas{
+ul.navbar-atas {
   padding-right: 70px !important;
 }
 
-a.img-responsive{
+a.img-responsive {
   width: 100px;
   height: 100px;
 }
 
-.navbar-kotak-logo{
+.navbar-kotak-logo {
   width: 124px;
   height: 124px;
   padding: 12px;
@@ -55,17 +51,17 @@ a.img-responsive{
   background-color: #000033;
 }
 
-.segitiga-navbar{
-  height:0px;
-	width:0px;
+.segitiga-navbar {
+  height: 0px;
+  width: 0px;
   margin-left: -12px;
   margin-top: 12px;
-  border-top: solid 40px #000033;  
-	border-left:solid 62px transparent;
-	border-right:solid 62px transparent;
+  border-top: solid 40px #000033;
+  border-left: solid 62px transparent;
+  border-right: solid 62px transparent;
 }
- 
-.search-bar{
+
+.search-bar {
   margin-left: 56.25%;
   width: 670px;
   height: 47px;
@@ -73,20 +69,20 @@ a.img-responsive{
   background-color: white;
 }
 
-h4{
+h4 {
   margin-left: 57.5px;
   margin-right: 24.5px;
 }
 
-.garis-berita{
-  content: '';
+.garis-berita {
+  content: "";
   display: block;
   position: absolute;
   bottom: 3px;
   width: 1300px;
   width: 1300px;
   height: 4px;
-  background-color: #7AC943;
+  background-color: #7ac943;
   left: 150px;
 }
 
@@ -99,5 +95,4 @@ h4{
   height: 1px;
   background-color: #7AC943;
   left: calc(50%-60px);
-  
 } */
