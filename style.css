@@ -1,10 +1,12 @@
 
 .footer-title{
-  border-bottom-width: 8px;
+  border-bottom-width: 2px;
   margin-bottom: 15px;
   border-bottom-style: solid;
   border-bottom-color: white;
+  border-left: 70px;
 }
+
 
 .clear{
   display: block;
@@ -16,8 +18,7 @@
 }
 
 .footer-container{
-  width: 1280px;
-  height: 408px;
+
   background-color: #14274e;
 }
 
@@ -27,6 +28,7 @@
   src: url(OpenSans/static/OpenSans/OpenSans-Bold.ttf);
   color: #ffff;
 }
+
 
 @font-face {
   font-family: 'Open Sans'; 
@@ -77,11 +79,25 @@ h4{
 }
 
 .garis-berita{
-  position: static;
-  overflow: hidden;
-  padding-top: 0.6em;
-  margin-top: 0px;
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
-  color: #7AC943;
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 3px;
+  width: 1300px;
+  width: 1300px;
+  height: 4px;
+  background-color: #7AC943;
+  left: 150px;
 }
+
+/* footer h6::before{
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 100px;
+  width: 1300px;
+  height: 1px;
+  background-color: #7AC943;
+  left: calc(50%-60px);
+  
+} */
