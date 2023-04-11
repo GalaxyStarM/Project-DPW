@@ -1,0 +1,87 @@
+
+.footer-title{
+  border-bottom-width: 8px;
+  margin-bottom: 15px;
+  border-bottom-style: solid;
+  border-bottom-color: white;
+}
+
+.clear{
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+  zoom: 1;
+}
+
+.footer-container{
+  width: 1280px;
+  height: 408px;
+  background-color: #14274e;
+}
+
+.footer-title{
+  font-family: 'Open Sans';
+  text-align: center;
+  src: url(OpenSans/static/OpenSans/OpenSans-Bold.ttf);
+  color: #ffff;
+}
+
+@font-face {
+  font-family: 'Open Sans'; 
+  src: url('OpenSans/static/OpenSans/OpenSans-Bold.ttf');
+}
+
+ul.navbar-atas{
+  padding-right: 70px !important;
+}
+
+a.img-responsive{
+  width: 100px;
+  height: 100px;
+}
+
+.navbar-kotak-logo{
+  width: 124px;
+  height: 124px;
+  padding: 12px;
+  position: relative;
+  left: 0;
+  top: -8px;
+  z-index: 99;
+  background-color: #000033;
+}
+
+.segitiga-navbar{
+  height:0px;
+	width:0px;
+  margin-left: -12px;
+  margin-top: 12px;
+  border-top: solid 40px #000033;  
+	border-left:solid 62px transparent;
+	border-right:solid 62px transparent;
+}
+ 
+.search-bar{
+  margin-left: 56.25%;
+  width: 670px;
+  height: 47px;
+  border-radius: 50rem;
+  background-color: white;
+}
+
+h4{
+  margin-left: 57.5px;
+  margin-right: 24.5px;
+}
+
+.garis-berita{
+  position: static;
+  overflow: hidden;
+  padding-top: 0.6em;
+  margin-top: 0px;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  color: #7AC943;
+}
