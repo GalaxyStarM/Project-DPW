@@ -86,9 +86,10 @@ a.img-responsive {
   left: 150px;
 }
 
-.img-kemitraan{
-  height: 70px;
-  width: 150px;
+.wrapper-mitra{
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 10px;
 }
 /* footer h6::before{
   content: '';
