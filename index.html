@@ -5,11 +5,253 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-  
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+    <!-- 1. Owl Carousel Min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" 
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 2. Owl Carousel ThemeMin.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" 
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000033;">
+        <div class="container">
+          <a class="navbar-brand" href="#"><span class="text-warning"></span></a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul id="nav-atas" class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="Universitas">Universitas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Fakultas">Fakultas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Jurusan">Jurusan</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Unduh Brosur">Unduh Brosur</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Pendaftaran">Pendaftaran</a>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+    </nav> 
+    <nav class="navbar navbar-expand-lg" style="background-color: #E3E3E3; height: 108px; flex-flow: row;">
+      <div class="container" style="z-index: 1;">
+          <div class="navbar-kotak-logo">
+            <a class="navbar-brand" href="#"><span class="text-warning">
+              <img src="Asset/LOGO-UR-TERBARU.png" alt="Universitas Riau" class="img-responsive" style="height: 100px;"> 
+              <div class="segitiga-navbar"></div>
+            </a> <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+          </div>
+          <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid" >
+              <form class="d-flex" role="search" >
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 50rem;">
+              </form>
+            </div>
+          </nav>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-3" style="margin-top: 87px;">
+              <li class="nav-item">
+                <a class="nav-link" href="Beranda">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Profil">Profil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Akademik">Akademik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Unduh Brosur">Sertifikat</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Galeri">Galeri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Kontak">Kontak</a>
+              </li>
+            </ul>
+          </div>
+        </div>  
+    </nav>
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Asset/banner-1.jpg" class="d-block w-100" alt="banner-1">
+        </div>
+        <div class="carousel-item">
+          <img src="Asset/banner-2.jpg" class="d-block w-100" alt="banner-2">
+        </div>
+        <div class="carousel-item">
+          <img src="Asset/banner-3.jpg" class="d-block w-100" alt="banner-3">
+        </div>
+        <div class="carousel-item">
+          <img src="Asset/banner-4.jpg" class="d-block w-100" alt="banner-4">
+        </div>
+        <div class="carousel-item">
+          <img src="Asset/poster-web.png" class="d-block w-100" alt="poster-web">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
-    
+  <section>
+    <div class="Berita">
+      <h4 class="title-content" style="width: 88px; height: 34px; margin-top: 20px;">Berita</h4>
+      <div class="garis-berita">
+      </div>
+    </div>
+  </section class="acara section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+					<div class="card text-light text-center bg-white pb-2 border-0">
+						<div class="card-body text-dark">
+							<div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/binaar.jpg"></div>
+						</div>
+					</div>
+				</div>
+        <div class="col-12 col-md-12 col-lg-4">
+					<div class="card text-light text-center bg-white pb-2 border-0">
+						<div class="card-body text-dark ">
+							<div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/metaverse.jpg"></div>
+						</div>
+					</div>
+				</div>
+        <div class="col-12 col-md-12 col-lg-4">
+					<div class="card text-light text-center bg-white pb-2 border-0">
+						<div class="card-body text-dark">
+							<div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/binaar9.png"></div>
+						</div>
+					</div>
+				</div>
+      </div>
+    </div>
+  <section>
+
+  </section>
+
+  <section>
+    <div class="container-fluid">
+      <h6 class="text-center fw-bold display-1 mb-3" style="font-size: 30px; padding-top: 20px;">KEMITRAAN</h6>
+      <div class="row">
+        <div class="owl-carousel owl-theme">
+          <div class="item mb-5">
+            <div class="card border-0">
+              <img class="img-kemitraan" src="Asset/Kemitraan_1.png" alt="Bps" class="card-img-top">
+            </div>
+          </div>
+          <!-- Jarak per item -->
+          <div class="item mb-5">
+            <div class="card border-0">
+              <img class="img-kemitraan" src="Asset/Kemitraan_2.png" alt="Mikrotik Academy" class="card-img-top">
+            </div>
+          </div>
+          <!-- Jarak per item -->
+          <div class="item mb-5">
+            <div class="card border-0">
+              <img class="img-kemitraan" src="Asset/Kemitraan_3.png" alt="Cisco" class="card-img-top">
+            </div>
+          </div>
+          <!-- Jarak per item -->
+          <div class="item mb-5">
+            <div class="card border-0">
+              <img class="img-kemitraan" src="Asset/Kemitraan_4.jpeg" alt="Microsoft" class="card-img-top">
+            </div>
+          </div>
+          <!-- Jarak per item -->
+          <div class="item mb-5">
+            <div class="card border-0">
+              <img class="img-kemitraan" src="Asset/Kemitraan_5.jpeg" alt="Esri" class="card-img-top">
+            </div>
+          </div>
+          <!-- Jarak per item -->
+          <div class="item mb-5">
+            <div class="card border-0">
+              <img class="img-kemitraan" src="Asset/Kemitraan_6.png" alt="Oracle" class="card-img-top">
+            </div>
+          </div>
+          <!-- Jarak per item -->
+          <div class="item mb-5">
+            <div class="card border-0">
+              <img class="img-kemitraan" src="Asset/Kemitraan_7.jpeg" alt="Kominfo" class="card-img-top">
+            </div>
+          </div>
+          <!-- Jarak per item -->
+          <div class="item mb-5">
+            <div class="card border-0">
+              <img class="img-kemitraan" src="Asset/Kemitraan_8.png" alt="Red Hat" class="card-img-top">
+            </div>
+          </div>
+          <!-- Jarak per item -->          
+      </div>   
+
+  <section>
+  <footer class>
+      <div class="footer-wrapper">
+          <div class="footer-container clearfix">
+              <div class="footer-title container-item">
+                  <h6>AKREDITASI BAN - PT <span>B</span class="clear"></h6>
+              </div>
+              <div class="footer-box-title"></div>
+              <div class=""></div>
+              <div class="footer-column container-item col-sm">
+                  <div id="text-2" class="widget">
+                      <p>
+                          <img src="#" alt="Logo Unri" class>
+                          <br>
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </footer>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 0. Jquery Cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" 
+  integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 1. Carousel Min .js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" 
+  integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" 
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- Init Owl Carousel -->
+  <script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:30,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  </script>
 </body>
 </html>
