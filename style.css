@@ -84,7 +84,7 @@ a.img-responsive {
   width: 1040px;
   height: 4px;
   background-color: #7ac943;
-  top: 668px;
+  top: 662px;
   left: 150px;
 }
 
@@ -105,12 +105,9 @@ a.img-responsive {
     top: 440px;
     left: 150px;
   }
-  .berita{
-    
-  }
 }
 .kegiatan{
-  background-color: saddlebrown;
+  background-color: #171010;
   /* padding: 200px 0; */
 }
 .garis-kegiatan {
@@ -123,7 +120,13 @@ a.img-responsive {
   top: 1030px;
   left: 180px;
 }
-
+.card-img-thumbnail{
+  width: 255px;
+  height: 255px;
+}
+/* .container-kegiatan{
+  left: 10px;
+} */
 /* footer h6::before{
   content: '';
   display: block;
