@@ -6,7 +6,7 @@
   border-left: 70px;
 }
 section{
-  padding: 20px;
+  padding: 15px;
 }
 
 .clear {
@@ -108,6 +108,20 @@ a.img-responsive {
   .berita{
     
   }
+}
+.kegiatan{
+  background-color: saddlebrown;
+  /* padding: 200px 0; */
+}
+.garis-kegiatan {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1010px;
+  height: 4px;
+  background-color: #7ac943;
+  top: 1030px;
+  left: 180px;
 }
 
 /* footer h6::before{
