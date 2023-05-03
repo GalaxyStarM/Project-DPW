@@ -6,7 +6,7 @@
   border-left: 70px;
 }
 section{
-  padding: 15px;
+  padding: 20px;
 }
 
 .clear {
@@ -84,7 +84,7 @@ a.img-responsive {
   width: 1040px;
   height: 4px;
   background-color: #7ac943;
-  top: 662px;
+  top: 668px;
   left: 150px;
 }
 
@@ -93,7 +93,7 @@ a.img-responsive {
   max-width: 100%;
   padding: 10px;
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 771px) {
 
   .garis-berita {
     content: "";
@@ -118,13 +118,22 @@ a.img-responsive {
   width: 1010px;
   height: 4px;
   background-color: #7ac943;
-  top: 1030px;
+  top: 1088px;
   left: 180px;
 }
 .card-img-thumbnail{
   width: 255px;
   height: 255px;
 }
+.footer{
+  background-color: #14274e;
+}
+/* .medsos{
+  display: inline-block;
+  color: #fff;
+  margin-right: 15px;
+} */
+
 /* .container-kegiatan{
   left: 10px;
 } */
