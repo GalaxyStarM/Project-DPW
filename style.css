@@ -49,7 +49,6 @@ a.img-responsive {
   padding: 12px;
   position: relative;
   left: 0;
-  top: -8px;
   z-index: 99;
   background-color: #000033;
 }
