@@ -18,6 +18,20 @@ section{
   zoom: 1;
 }
 
+.background-1{
+  background: url('/Asset/background1.jpg') no-repeat center 100%;
+  height: 671px;
+  display:block; /*memastikan muncul*/
+}
+
+#transbox {
+  margin: 30px;
+  height: 671px;
+  background-color: #000;
+  opacity: 0.9;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
 .footer-container {
   background-color: #14274e;
 }
@@ -148,171 +162,82 @@ a.img-responsive {
   background-color: #7AC943;
   left: calc(50%-60px);
 } */
-/* Google Fonts - Poppins */
-.slide-container{
-  max-width: 1120px;
-  width: 100%;
-  padding: 60px 0;
-}
-.slide-content{
-  margin: 0 60px;
-  overflow: hidden;
-  border-radius: 25px;
-}
-.card{
-  border-radius: 25px 25px 0 25px;
-  background-color: #FFF;
-}
-.image-content,
-.card-content{
+
+.kemitraan{
   display: flex;
-  flex-direction: column;
+  padding: 0 35px;
+  margin-top: 35px;
+  margin-bottom: 35px;
   align-items: center;
-  padding: 10px 14px;
-  border-bottom: 25px;
-  
+  justify-content: center;
+  background: white;
 }
-.card-content{
-  z-index: 1;
-}
-.image-content{
+.wrapper{
+  display: flex;
+  max-width: 1200px;
   position: relative;
-  row-gap: 5px;
-  padding: 25px 0;
 }
-.overlay{
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #4070F4;
-  border-radius: 25px 25px 0 25px;
-}
-.overlay::before,
-.overlay::after{
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: -40px;
-  height: 40px;
-  width: 40px;
-  background-color: #4070F4;
-  border: none;
-}
-.overlay::after{
-  border-radius: 0 25px 0 0;
-  background-color: #FFF;
-  border: none;
-}
-.card-image{
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background: #FFF;
-  padding: 3px;
-}
-.card-image .card-img{
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #4070F4;
-  
-}
-.name{
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-}
-.description{
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-}
-.button{
-  border: none;
-  font-size: 16px;
-  color: #FFF;
-  padding: 8px 16px;
-  background-color: #4070F4;
-  border-radius: 6px;
-  margin: 14px;
+.wrapper i{
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343F4F;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-.button:hover{
-  background: #06143b;
-}
-
-.swiper-navBtn{
-  color: #6E93f7;
-  transition: color 0.3s ease;
-}
-.swiper-navBtn:hover{
-  color: #081539;
-}
-.swiper-navBtn::before,
-.swiper-navBtn::after{
-  font-size: 35px;
-}
-.swiper-button-next{
-  right: 0;
-}
-.swiper-button-prev{
-  left: 0;
-}
-.swiper-pagination-bullet{
-  background-color: #6E93f7;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active{
-  background-color: #4070F4;
-}
-span .overlay{
-  border-radius: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .slide-content{
-    margin: 5 10px;
-  }
-  .swiper-navBtn{
-    display: none;
-  }
- 
-}
-
-.medsos-icon{
-  margin-top: 10px;
-  margin-right: 13px;
-  text-decoration-line: none;
-  letter-spacing: 0px;
-  width: 30px;
-  padding-left: 13px;
-
-}
-/* 
-section .akreditasi::before{
-  content: '';
-  display: block;
+  font-size: 1.15rem;
   position: absolute;
-  bottom: 0;
-  width: 120px;
-  height: 1px;
-  background-color: rgb(167, 165, 165);
-  left: calc(50% - 60px);
-  z-index: 1;
+  text-align: center;
+  line-height: 44px;
+  background: bisque;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
 }
-section .akreditasi::after{
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 40px;
-  height: 4px;
-  background-color: rgb(62, 173, 103);
-  left: calc(50% - 20px);
-  z-index: 1;
-} */
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover{
+  background: #f2f2f2;
+}
+.wrapper i:first-child{
+  left: -60px;
+  display: none;
+}
+.wrapper i:last-child{
+  right: -60px;
+}
+.wrapper .slider{
+  font-size: 0px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+.slider.dragging{
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.slider.dragging img{
+  pointer-events: none;
+}
+.slider img{
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 30px;
+  width: calc(100% / 5);
+}
+.slider img:first-child{
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .slider img{
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .slider img{
+    width: calc(100%/ 1);
+  }
+}
