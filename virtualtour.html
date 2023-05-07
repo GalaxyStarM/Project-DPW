@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
 </head>
 <body>
+  <style>
+    .carousel-item{
+    height: 100vh;
+    min-height: 300px;
+}
+.carousel-caption{
+    bottom: 245px;
+    z-index: 2;
+}
+.carousel-caption h5 {
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	text-align: center;
+}
+.carousel-inner:before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+} 
+  </style>
     <div class="section-menu">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000033;">
           <div class="container">
@@ -85,9 +111,16 @@
             </div>
           </div>  
       </nav>
-      <div class="vitual-tour">
-        <div id="transbox" class="background-1 ">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="Asset/background1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+              <h5>Virtual Tour</h5>
+          </div>
         </div>
+      </div>
+      <div class="vitual-tour">
         <div class="container">
             <center><iframe src="https://informatika.ft.unri.ac.id/file/virtualtour-ti/" width=100% height ="450" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>
         </div>
