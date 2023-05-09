@@ -35,11 +35,14 @@
 	z-index: 1;
 } 
   </style>
-    <div class="section-menu">
+    <header class="header">
+      <div class="top-bar d-none d-lg-block">
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000033;">
           <div class="container">
-            <a class="navbar-brand" href="#"><span class="text-warning"></span></a> 
-            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+            <a class="navbar-brand" href="#"><span class="text-warning"></span></a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+              class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+              type="button"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul id="nav-atas" class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -58,59 +61,187 @@
                   <a class="nav-link" href="#Pendaftaran">Pendaftaran</a>
                 </li>
               </ul>
-          </div>
-        </nav> 
-        
-      <nav class="navbar navbar-expand-lg" style="background-color: #E3E3E3; height: 124px; flex-flow: row;">
-        <div class="container" style="z-index: 1;">
-          <!-- <div class="row align-items-end"> -->
+            </div>
+        </nav>
+      </div>
+      <div class="bottom-bar">
+        <nav class="navbar navbar-expand-lg" style="background-color: #E3E3E3; height: 124px; flex-flow: row;">
+          <div class="container" style="z-index: 1;">
+            <!-- <div class="row align-items-end"> -->
             <div class="col-xl-2 col-lg-2" style="width: 144px;">
               <div class="navbar-kotak-logo">
-                <img src="Asset/LOGO-UR-TERBARU.png" alt="Universitas Riau" class="img-responsive" style="height: 100px;"> 
+                <img src="Asset/logounriputih.png" alt="Universitas Riau" class="img-responsive" style="height: 100px;">
                 <div class="segitiga-navbar"></div>
-                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+  
               </div>
             </div>
-            
+  
+            <!-- Logo -->
             <div class="col-xl-3 col-lg-3">
-              <h3 style="font-size: 22px;">PROGRAM STUDI 
-               <br> S1 TEKNIK 
-               <br> INFORMATIKA</h3>
+              <h4 style="font-size: 22px;">PROGRAM STUDI
+                <br> S1 TEKNIK
+                <br> INFORMATIKA
+              </h4>
             </div>
-    
-            <div class="col-xl-8 col-lg-8">
-              <div class="bg-body-tertiary" style="margin-left: 30%;">
-                <div class="container-fluid">
+            <div class="col-xl-7 col-lg-7 nav-samping d-none d-md-block">
+              <div class="bg-body-tertiary" style="margin-left: 0px;">
+                <div class="container-fluid" style="margin: 20px 0px 0px 0px;">
                   <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="border-radius: 50rem;">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                      style="border-radius: 50rem;">
                   </form>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul id="nav-atas" class="navbar-nav ms-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a class="nav-link" href="Beranda">Beranda</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="Profil">Profil</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="Akademik">Akademik</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="Sertifikat">Sertifikat</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="Galeri">Galeri</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="Kontak">Kontak</a>
-                      </li>
-                    </ul>
-                </div>
+                  <nav>
+                    <div class="clearfix" style="clear: both;">
+                      <a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder" type="button"></i></a>
+                      <ul class="menu">
+                        <li><a class="homer" href="#"><i class="fa fa-home"></i> BERANDA</a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-user"></i> PROFIL</a>
+                          <ul>
+                            <li><a href="#">Sejarah</a></li>
+                            <li><a href="#">Visi dan Misi</a></li>
+                            <li><a href="#">Tujuan</a></li>
+                            <li><a href="#">Sasaran</a></li>
+                            <li><a href="#">Strategi</a></li>
+                            <li><a href="#">Akreditasi</a></li>
+                            <li><a href="#">Dosen</a></li>
+                            <li><a href="#">Tenaga Kependidikan</a></li>
+                            <li><a href="#">Laboratorium</a>
+                              <ul class="sub-menu">
+                                <li><a href="#">Lab. Jaringan Komputer</a></li>
+                                <li><a href="#">Lab. Rekayasa Perangkat Lunak</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-camera"></i> AKADEMIK</a>
+                          <ul class="sub-menu">
+                            <li><a href="#">Kurikulum</a></li>
+                            <li><a href="#">Jadwal Kuliah</a></li>
+                            <li><a href="#">Kalender Akademik</a></li>
+                            <li><a href="#">RPS</a></li>
+                            <li><a href="#">Tracer Study</a>
+                              <ul>
+                                <li><a href="#">Tracer Study 2022</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">Layanan KP</a>
+                              <ul>
+                                <li><a href="#">Download Dokumen KP</a></li>
+                                <li><a href="#">Form Isian KP</a></li>
+                                <li><a href="#">Jadwal Seminar KP</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">Layanan Skripsi</a>
+                              <ul>
+                                <li><a href="#">Download Dokumen Skripsi</a></li>
+                                <li><a href="#">Form Isian Skripsi</a></li>
+                                <li><a href="#">Jadwal SEMPRO/ Sidang SKRIPSI</a></li>
+                              </ul>
+                            </li>
+                            <li><a href="#">SITEI (Akademik)</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-bullhorn"></i> TUK</a>
+                          <ul class="sub-menu">
+                            <li><a href="#">Mikrotik Academy</a></li>
+                          </ul>
+                        </li>
+  
+                        <li><a href="#"><i class="fa fa-tags"></i> GALERI</a>
+                          <ul class="sub-menu">
+                            <li><a href="#">Foto</a></li>
+                            <li><a href="#">Video</a>
+                            <li>
+                            <li><a href="#">Virtual Tour</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#"><i class="fa fa-envelope"></i> CONTACT</a></li>
+                      </ul>
+                    </div>
                 </div>
               </div>
             </div>
-          </div>  
-      </nav>
+            <div class="d-flex d-md-none align-items-center gap-2">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <a class="btn" data-bs-toggle="collapse" href="#navMenu" role="button" aria-expanded="false"
+                aria-controls="navMenu">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+        </nav>
+        <ul class="collapse menu " id="navMenu" style="padding-left: 0px;">
+          <li><a class="homer" href="#"><i class="fa fa-home"></i>BERANDA</a>
+          </li>
+          <li class="dropdown">
+            <a class="" href="#" data-bs-target="profile-collapse" aria-controls="profile-collapse">
+              <i class="fa fa-user"></i> PROFIL
+            </a>
+            <ul class="menu">
+              <li><a href="#">Sejarah</a></li>
+              <li><a href="#">Visi dan Misi</a></li>
+              <li><a href="#">Tujuan</a></li>
+              <li><a href="#">Sasaran</a></li>
+              <li><a href="#">Strategi</a></li>
+              <li><a href="#">Akreditasi</a></li>
+              <li><a href="#">Dosen</a></li>
+              <li><a href="#">Tenaga Kependidikan</a></li>
+              <li><a href="#">Laboratorium</a>
+                <ul class="sub-menu">
+                  <li><a href="#">Lab. Jaringan Komputer</a></li>
+                  <li><a href="#">Lab. Rekayasa Perangkat Lunak</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-camera"></i> AKADEMIK</a>
+            <ul class="sub-menu">
+              <li><a href="#">Kurikulum</a></li>
+              <li><a href="#">Jadwal Kuliah</a></li>
+              <li><a href="#">Kalender Akademik</a></li>
+              <li><a href="#">RPS</a></li>
+              <li><a href="#">Tracer Study</a>
+                <ul>
+                  <li><a href="#">Tracer Study 2022</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Layanan KP</a>
+                <ul>
+                  <li><a href="#">Download Dokumen KP</a></li>
+                  <li><a href="#">Form Isian KP</a></li>
+                  <li><a href="#">Jadwal Seminar KP</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Layanan Skripsi</a>
+                <ul>
+                  <li><a href="#">Download Dokumen Skripsi</a></li>
+                  <li><a href="#">Form Isian Skripsi</a></li>
+                  <li><a href="#">Jadwal SEMPRO/ Sidang SKRIPSI</a></li>
+                </ul>
+              </li>
+              <li><a href="#">SITEI (Akademik)</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-bullhorn"></i> TUK</a>
+            <ul class="sub-menu">
+              <li><a href="#">Mikrotik Academy</a></li>
+            </ul>
+          </li>
+  
+          <li><a href="#"><i class="fa fa-tags"></i> GALERI</a>
+            <ul class="sub-menu">
+              <li><a href="#">Foto</a></li>
+              <li><a href="#">Video</a>
+              <li>
+              <li><a href="#">Virtual Tour</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-envelope"></i> CONTACT</a></li>
+        </ul> 
+  
+      </div>
+    </header>
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -125,7 +256,7 @@
             <center><iframe src="https://informatika.ft.unri.ac.id/file/virtualtour-ti/" width=100% height ="450" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>
         </div>
       </div>
-
+    
       <div class="footer">
         <footer class="container">
         <div class="container text-left text-md-left text-light pt-5 pb-4">

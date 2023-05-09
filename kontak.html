@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+
+    <!-- 1. Owl Carousel Min.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" 
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 2. Owl Carousel ThemeMin.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" 
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <style>
+      section{
+        padding-top: 0;
+      }
+        .carousel-item{
+        height: 300px;
+        min-height: 100px;
+      }
+      .carousel-caption{
+          justify-content: center;
+          z-index: 2;
+      }
+      .carousel-caption h5 {
+          font-size: 45px;
+          text-transform: uppercase;
+          position: relative;
+          z-index: 1;
+          justify-content: center;
+      }
+      .carousel-inner:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgba(0, 0, 0, 0.7);
+          z-index: 2;
+      }
+      .single-page .address-box{
+          margin-bottom: 30px;
+      }
+      address{
+          margin-bottom: 23px;
+          font-style: normal;
+          line-height: 1.7;
+          display: block;
+      }
+      *{
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+      .row::before, .row::after{
+          content: "";
+          display: table;
+      }
+      *::before, ::after{
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+      .clearfix::after{
+        content: "";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+      }
+      .info:hover{
+        color: #f78da7;;
+      }
+    
+    </style>
+
+<header class="header">
+  <div class="top-bar d-none d-lg-block">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000033;">
+      <div class="container">
+        <a class="navbar-brand" href="#"><span class="text-warning"></span></a>
+        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+          class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
+          type="button"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul id="nav-atas" class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="Universitas">Universitas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Fakultas">Fakultas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Jurusan">Jurusan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Unduh Brosur">Unduh Brosur</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#Pendaftaran">Pendaftaran</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+  <div class="bottom-bar">
+    <nav class="navbar navbar-expand-lg" style="background-color: #E3E3E3; height: 124px; flex-flow: row;">
+      <div class="container" style="z-index: 1;">
+        <!-- <div class="row align-items-end"> -->
+        <div class="col-xl-2 col-lg-2" style="width: 144px;">
+          <div class="navbar-kotak-logo">
+            <img src="Asset/logounriputih.png" alt="Universitas Riau" class="img-responsive" style="height: 100px;">
+            <div class="segitiga-navbar"></div>
+
+          </div>
+        </div>
+
+        <!-- Logo -->
+        <div class="col-xl-3 col-lg-3">
+          <h4 style="font-size: 22px;">PROGRAM STUDI
+            <br> S1 TEKNIK
+            <br> INFORMATIKA
+          </h4>
+        </div>
+        <div class="col-xl-7 col-lg-7 nav-samping d-none d-md-block">
+          <div class="bg-body-tertiary" style="margin-left: 0px;">
+            <div class="container-fluid" style="margin: 20px 0px 0px 0px;">
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                  style="border-radius: 50rem;">
+              </form>
+              <nav>
+                <div class="clearfix" style="clear: both;">
+                  <a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder" type="button"></i></a>
+                  <ul class="menu">
+                    <li><a class="homer" href="#"><i class="fa fa-home"></i> BERANDA</a>
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa fa-user"></i> PROFIL</a>
+                      <ul>
+                        <li><a href="#">Sejarah</a></li>
+                        <li><a href="#">Visi dan Misi</a></li>
+                        <li><a href="#">Tujuan</a></li>
+                        <li><a href="#">Sasaran</a></li>
+                        <li><a href="#">Strategi</a></li>
+                        <li><a href="#">Akreditasi</a></li>
+                        <li><a href="#">Dosen</a></li>
+                        <li><a href="#">Tenaga Kependidikan</a></li>
+                        <li><a href="#">Laboratorium</a>
+                          <ul class="sub-menu">
+                            <li><a href="#">Lab. Jaringan Komputer</a></li>
+                            <li><a href="#">Lab. Rekayasa Perangkat Lunak</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-camera"></i> AKADEMIK</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Kurikulum</a></li>
+                        <li><a href="#">Jadwal Kuliah</a></li>
+                        <li><a href="#">Kalender Akademik</a></li>
+                        <li><a href="#">RPS</a></li>
+                        <li><a href="#">Tracer Study</a>
+                          <ul>
+                            <li><a href="#">Tracer Study 2022</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Layanan KP</a>
+                          <ul>
+                            <li><a href="#">Download Dokumen KP</a></li>
+                            <li><a href="#">Form Isian KP</a></li>
+                            <li><a href="#">Jadwal Seminar KP</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">Layanan Skripsi</a>
+                          <ul>
+                            <li><a href="#">Download Dokumen Skripsi</a></li>
+                            <li><a href="#">Form Isian Skripsi</a></li>
+                            <li><a href="#">Jadwal SEMPRO/ Sidang SKRIPSI</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="#">SITEI (Akademik)</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-bullhorn"></i> TUK</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Mikrotik Academy</a></li>
+                      </ul>
+                    </li>
+
+                    <li><a href="#"><i class="fa fa-tags"></i> GALERI</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Foto</a></li>
+                        <li><a href="#">Video</a>
+                        <li>
+                        <li><a href="#">Virtual Tour</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#"><i class="fa fa-envelope"></i> CONTACT</a></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex d-md-none align-items-center gap-2">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <a class="btn" data-bs-toggle="collapse" href="#navMenu" role="button" aria-expanded="false"
+            aria-controls="navMenu">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+    </nav>
+    <ul class="collapse menu " id="navMenu" style="padding-left: 0px;">
+      <li><a class="homer" href="#"><i class="fa fa-home"></i>BERANDA</a>
+      </li>
+      <li class="dropdown">
+        <a class="" href="#" data-bs-target="profile-collapse" aria-controls="profile-collapse">
+          <i class="fa fa-user"></i> PROFIL
+        </a>
+        <ul class="menu">
+          <li><a href="#">Sejarah</a></li>
+          <li><a href="#">Visi dan Misi</a></li>
+          <li><a href="#">Tujuan</a></li>
+          <li><a href="#">Sasaran</a></li>
+          <li><a href="#">Strategi</a></li>
+          <li><a href="#">Akreditasi</a></li>
+          <li><a href="#">Dosen</a></li>
+          <li><a href="#">Tenaga Kependidikan</a></li>
+          <li><a href="#">Laboratorium</a>
+            <ul class="sub-menu">
+              <li><a href="#">Lab. Jaringan Komputer</a></li>
+              <li><a href="#">Lab. Rekayasa Perangkat Lunak</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-camera"></i> AKADEMIK</a>
+        <ul class="sub-menu">
+          <li><a href="#">Kurikulum</a></li>
+          <li><a href="#">Jadwal Kuliah</a></li>
+          <li><a href="#">Kalender Akademik</a></li>
+          <li><a href="#">RPS</a></li>
+          <li><a href="#">Tracer Study</a>
+            <ul>
+              <li><a href="#">Tracer Study 2022</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Layanan KP</a>
+            <ul>
+              <li><a href="#">Download Dokumen KP</a></li>
+              <li><a href="#">Form Isian KP</a></li>
+              <li><a href="#">Jadwal Seminar KP</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Layanan Skripsi</a>
+            <ul>
+              <li><a href="#">Download Dokumen Skripsi</a></li>
+              <li><a href="#">Form Isian Skripsi</a></li>
+              <li><a href="#">Jadwal SEMPRO/ Sidang SKRIPSI</a></li>
+            </ul>
+          </li>
+          <li><a href="#">SITEI (Akademik)</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-bullhorn"></i> TUK</a>
+        <ul class="sub-menu">
+          <li><a href="#">Mikrotik Academy</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#"><i class="fa fa-tags"></i> GALERI</a>
+        <ul class="sub-menu">
+          <li><a href="#">Foto</a></li>
+          <li><a href="#">Video</a>
+          <li>
+          <li><a href="#">Virtual Tour</a></li>
+        </ul>
+      </li>
+      <li><a href="#"><i class="fa fa-envelope"></i> CONTACT</a></li>
+    </ul> 
+
+  </div>
+</header>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="Asset/kontak2.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <h5 style="margin-bottom: 75px;">Kontak</h5>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background-color: #E3E3E3; padding-top: 20px;">
+    <div class="container">
+      <div class="single-page">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel-map">
+                    <div style="position: relative; overflow: hidden; height: 300px;">
+                        <div id="my-map-canvas" style="height: 100%; width: 100%;"><iframe style="height: 100%; width: 100%; border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d705.2822014261163!2d101.37672572970187!3d0.4801792745436263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x883d291677ab8a57!2sTeknik+Informatika+Universitas+Riau!5e0!3m2!1sen!2sid!4v1565184619833!5m2!1sen!2sid" allowfullscreen=""></iframe></div>
+                        <a class="google-maps-code" rel="nofollow" href="http://www.interserver-coupons.com/" id="grab-map-authorization" target="_blank">http://www.interserver-coupons.com</a>
+                        <style>#my-map-canvas .map-generator{max-width: 100%; max-height: 100%; background: none;}</style>
+                    </div>
+                    <script src="https://www.interserver-coupons.com/google-maps-authorization.js?id=03f8ab06-cc00-be5c-881b-5a181d7d082f&c=google-maps-code&u=1477297956" defer="defer" async="async"></script>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="widget">
+                    <div class="widget-header">
+                        <h2 class="widget-title">Universitas Riau</h2>
+                        <hr color="#7ac943" class="mb-4" style="height: 3px; opacity: 100%; top: 10px; border: none;">
+                    </div>
+                    <address class="address-box">
+                        <p><b>Alamat:</b></p>
+                        <p style="text-align: justify; margin-top: -13px;">Gedung C lantai 2 Fakultas Teknik, Universitas Riau Kampus Binawidya Jl.HR Soebrantas KM.12.5, Simpang Baru, Binawidya, Pekanbaru-28293</p>
+                        <p><b>Email:</b></p>
+                        <p style="text-align: justify; margin-top: -13px;">E-email:informatika@eng.unri.ac.id</p>
+                    </address>
+                </div>
+            </div>
+            <!-- <div class="col-md-8">
+                <iframe allowfullscreen="" allow="geolocation; microphone; camera" style="border: 0; height: 450px; width: 100%;" src="https://widgets.moovitapp.com/w/56764567F1710178E0530100007F64DC/118784"></iframe>
+            </div> -->
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 30px;">
+    <div class="container-fluid">
+      <div class="title-wrap clearfix">
+        <h3 style="font-size: 28px; font-weight: 700; text-transform: none; text-align: center; color: #163269;">Pertanyaan Akademik</h3>
+      </div>
+      <div class="row" style="text-align: center;">
+        <div class="col-lg-6 col-md-6">
+          <img src="Asset/people.png" alt="">
+          <div class="mahasiswa">
+            <h5 style=" font-weight: 700; color: #163269;"><span>Calon Mahasiswa</span></h5>
+          </div>
+          <div class="info" style="text-transform: none; text-decoration: none;">
+            <p>
+              <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Email:</b></a><br>
+              <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black; ">informatika@eng.unri.ac.id</a>
+            </p>
+            <p>
+              <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Telp:</b></a><br>
+              <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black; ">(+62761)66596</a>
+            </p>
+            <p>
+              <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Fax:</b></a><br>
+              <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black; ">(+62761)66596</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <img src="Asset/wisuda.png" alt="">
+          <div class="mahasiswa">
+            <h5 style=" font-weight: 700; color: #163269;"><span>Mahasiswa Saat ini</span></h5>
+          </div>
+          <div class="info" style="text-transform: none; text-decoration: none;">
+            <p>
+              <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Email:</b></a><br>
+              <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black; ">Kemahasiswaan@unri.ac.id</a>
+            </p>
+            <p>
+              <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Telp:</b></a><br>
+              <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black; ">(0761-63272)</a>
+            </p>
+            <p>
+              <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Instagram</b></a><br>
+              <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black;">@mahasiswa_universitasriau</a>
+            </p>
+          </div>
+      </div>
+      <div class="title-akademik" style="padding-top: 20px;">
+        <h3 style="font-size: 28px; font-weight: 700; text-transform: none; text-align: center; color: #163269;">Pertanyaan Akademik</h3>
+        <br>
+      </div>
+      <div class="row" style="text-align: center;">
+        <div class="col-12 col-md-12 col-lg-4">
+          <img src="Asset/linkedin3.png" alt="">
+          <div class="info" style="text-transform: none; text-decoration: none;">
+            <p>
+              <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Linkedin</b></a><br>
+              <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black; ">Universitas Riau</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <img src="Asset/facebook1.png" alt="">
+          <div class="info" style="text-transform: none; text-decoration: none;">
+            <p>
+              <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Facebook</b></a><br>
+              <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black; ">Department of Informatic <br>Engineering, University of Riau</a>
+            </p>
+          </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4">
+        <img src="Asset/instagram2.png" alt="">
+        <div class="info" style="text-transform: none; text-decoration: none;">
+          <p>
+            <a href="" style="text-transform: none; text-decoration: none; color: black; "><b>Instagram</b></a><br>
+            <a href="informatika@eng.unri.ac.id" style="text-transform: none; text-decoration: none; color: black; ">@informatika_ur</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="footer">
+    <footer>
+    <div class="container text-left text-md-left text-light pt-5 pb-4">
+    <div class="row text-center text-md-left">
+      <div class="row d-flex justify-content-center">
+        <div>
+          <h4 class="akreditasi">AKREDITASI BAN PT-<strong>B</strong></h4>
+          <!-- <hr class="d-flex" color="#ffffff" width="28%" style="height: 4px; opacity: 100%; top: 10px; margin-left: 36.1%;"> -->
+          <hr class="mb-4" style="opacity: 100%; margin-bottom: 10px; color: #ffffff">
+        </div>
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <div class="container-fluid">
+          <img src="Asset/logounriputih.png" alt="" style="width: 180px; padding-bottom: 15px; text-align: justify">
+          <p style="text-align: center">
+            <a href="https://instagram.com/syahirahtr_m?igshid=YmMyMTA2M2Y=" target="" class="medsos-icon" title="whatsapp"><i class="fa-brands fa-square-whatsapp fa-2x" style="color: #ffffff;"></i></a>
+            <a href="" target="" class="medsos-icon" title="facebook"><i class="fa-brands fa-square-facebook fa-2x" style="color: #ffffff;"></i></a>
+            <a href="" target="_blank" class="medsos-icon" title="linkedin"><i class="fa-brands fa-linkedin fa-2x" style="color: #ffffff;"></i></a>
+            <a href="" target="_blank" class="medsos-icon" title="instagram"><i class="fa-brands fa-square-instagram fa-2x" style="color: #ffffff;"></i></a>
+          </p>
+            <!-- <ul class="medsos">
+              <li><a href="https://instagram.com/syahirahtr_m?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-square-instagram"></i></a></li>
+              <li><a href="https://twitter.com/Syahirahtri_m" target="_blank"><i class="fa-brands fa-square-twitter"></i></li>
+            </ul> -->
+        </div>
+      </div>
+
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <p class="text-uppercase mb-0 font-weight-bold text-light" style="font-size: 14px; text-align: left;">S1 Teknik Informatika</p>
+        <hr color="#ffffff" class="mb-4" style="height: 4px; opacity: 100%; top: 10px;">
+        <p style="text-align: left">
+          <a href="#" class="text-light" style="text-decoration: none;">- Event</a>
+          <hr class="mb-4" style="opacity: 100%; color: #ffffff">
+        </p>
+        <p style="text-align: left">
+          <a href="#" class="text-light" style="text-decoration: none;">- Prestasi Mahasiswa</a>
+          <hr class="mb-4" style="opacity: 100%; color: #ffffff">
+        </p>
+        <p style="text-align: left">
+          <a href="#" class="text-light" style="text-decoration: none;">- Berita</a>
+          <hr class="mb-4" style="opacity: 100%; color: #ffffff">
+        </p>
+        <p style="text-align: left">
+          <a href="#" class="text-light" style="text-decoration: none;">- Tutorial</a>
+          <hr class="mb-4" style="opacity: 100%; color: #ffffff">
+        </p>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <p class="text-uppercase mb-0 font-weight-bold text-light" style="font-size: 14px; text-align: left;">KONTAK</p>
+        <hr color="#ffffff" class="mb-4" style="height: 4px; opacity: 100%; top: 10px;">
+        <p style="font-size: 16px; text-align: justify">Gedung C lantai 2 Fakultas Teknik, Universitas Riau Kampus Binawidya Jl.HR Soebrantas KM.12.5, Simpang Baru, Binawidya, Pekanbaru-28293, E-email:informatika@eng. <br>unri.ac.id</p>
+        
+      </div> 
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <p class="text-uppercase mb-0 font-weight-bold text-light" style="font-size: 14px; text-align: left">LINK TERKAIT</p>
+        <hr color="#ffffff" class="mb-4" style="height: 4px; opacity: 100%; top: 10px;">
+        <p style="text-align: left">
+          <a href="#" class="text-light" style="text-decoration: none;">- Beasiswa</a>
+          <hr class="mb-4" style="opacity: 100%; color: #ffffff">
+        </p>
+        <p style="text-align: left">
+          <a href="#" class="text-light" style="text-decoration: none;">- Konferensi </a>
+          <hr class="mb-4" style="opacity: 100%; color: #ffffff">
+        </p>
+        <p style="text-align: left">
+          <a href="#" class="text-light" style="text-decoration: none;">- Tracer Study</a>
+          <hr class="mb-4" style="opacity: 100%; color: #ffffff">
+        </p>
+      </div>
+  </div>
+  </footer>
+
+  <footer>
+      <div style="background-color: #000033; text-align: center; height: 40px; color: white;">
+          <p>
+            Copyright All Right Reserved 2023
+          </p>
+      </div>
+  </footer>
+  </div>
+
+   <!-- <section class="kontak">
+    <div class="Berita">
+        <div class="d-flex">
+          <h4 class="title-content" style="width: 65px;">Berita</h4>
+        <hr color="#7ac943" width="85%" style="margin-left: 2px; height: 4px; opacity: 100%; border: none;">
+        </div>
+    </div>
+
+  </section> -->
+
+</body>
+
+</html>

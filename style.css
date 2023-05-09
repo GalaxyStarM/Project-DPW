@@ -65,6 +65,7 @@ a.img-responsive {
   border-top: solid 40px #000033;
   border-left: solid 62px transparent;
   border-right: solid 62px transparent;
+  
 }
 
 .search-bar {
@@ -306,17 +307,8 @@ span .overlay {
   width: 30px;
   padding-left: 13px;
 }
-/* 
-section .akreditasi::before{
-  content: '';
-  display: block;
-  position: absolute;
-  bottom: 0;
-  width: 120px;
-  height: 1px;
-  background-color: rgb(167, 165, 165);
-  left: calc(50% - 60px);
-  z-index: 1;
+.kontak{
+  background-color: #E3E3E3E3;
 }
 section .akreditasi::after{
   content: '';
