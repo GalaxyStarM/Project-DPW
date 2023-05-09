@@ -5,10 +5,9 @@
   border-bottom-color: white;
   border-left: 70px;
 }
-section{
+section {
   padding: 30px;
 }
-
 
 .clear {
   display: block;
@@ -44,6 +43,10 @@ a.img-responsive {
   height: 100px;
 }
 
+.nav-atas ul li a {
+  margin-left: 30px;
+}
+
 .navbar-kotak-logo {
   width: 124px;
   height: 124px;
@@ -77,24 +80,12 @@ a.img-responsive {
   margin-right: 24.5px;
 }
 
-/* .garis-berita {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 1040px;
-  height: 4px;
-  background-color: #7ac943;
-  top: 668px;
-  left: 150px;
-} */
-
-.wrapper-mitra{
+.wrapper-mitra {
   margin: 0 auto;
   max-width: 100%;
   padding: 10px;
 }
 @media only screen and (max-width: 771px) {
-
   /* .garis-berita {
     content: "";
     display: block;
@@ -105,10 +96,9 @@ a.img-responsive {
     top: 440px;
     left: 150px;
   } */
-  
 }
-.kegiatan{
-  background-color: #E3E3E3E3;
+.kegiatan {
+  background-color: #e3e3e3e3;
   /* padding: 200px 0; */
 }
 .garis-kegiatan {
@@ -121,178 +111,200 @@ a.img-responsive {
   top: 1088px;
   left: 180px;
 }
-.card-img-thumbnail{
+.card-img-thumbnail {
   width: 255px;
   height: 255px;
 }
-.footer{
+.footer {
   background-color: #14274e;
   width: 100%;
 }
 
-/* .medsos{
-  display: inline-block;
-  color: #fff;
-  margin-right: 15px;
-} */
-
-/* .container-kegiatan{
-  left: 10px;
-} */
-/* .akreditasi ::before{
-  content: '';
-  display: block;
+.kemitraan {
+  display: flex;
+  padding: 0 35px;
+  margin-top: 35px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.wrapper {
+  display: flex;
+  max-width: 1200px;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 44px;
+  width: 44px;
+  color: #343f4f;
+  cursor: pointer;
+  font-size: 1.15rem;
   position: absolute;
-  bottom: 100px;
-  width: 1300px;
-  height: 1px;
-  background-color: #7AC943;
-  left: calc(50%-60px);
-} */
-/* Google Fonts - Poppins */
-.slide-container{
-  max-width: 1120px;
-  width: 100%;
-  padding: 60px 0;
+  text-align: center;
+  line-height: 44px;
+  background: bisque;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
 }
-.slide-content{
-  margin: 0 60px;
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.9);
+}
+.wrapper i:hover {
+  background: #f2f2f2;
+}
+.wrapper i:first-child {
+  left: -22px;
+  display: none;
+}
+.wrapper i:last-child {
+  right: -22px;
+}
+.wrapper .slider {
+  font-size: 0px;
+  cursor: pointer;
   overflow: hidden;
-  border-radius: 25px;
+  white-space: nowrap;
+  scroll-behavior: smooth;
 }
-.card{
-  border-radius: 25px 25px 0 25px;
-  background-color: #FFF;
+.slider.dragging {
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.slider.dragging img {
+  pointer-events: none;
+}
+.slider img {
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 100px;
+  width: calc(100% -150px);
+}
+.slider img:first-child {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 900px) {
+  .slider img {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .slider img {
+    width: calc(100% / 1);
+  }
+}
+
+.card {
+  border-radius: 25px 25px 25px 25px;
+  background-color: #fff;
 }
 .image-content,
-.card-content{
+.card-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px 14px;
   border-bottom: 25px;
-  
 }
-.card-content{
+.card-content {
   z-index: 1;
 }
-.image-content{
+.image-content {
   position: relative;
   row-gap: 5px;
   padding: 25px 0;
 }
-.overlay{
+.overlay {
   position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #4070F4;
+  background-color: #4070f4;
   border-radius: 25px 25px 0 25px;
 }
 .overlay::before,
-.overlay::after{
-  content: '';
+.overlay::after {
+  content: "";
   position: absolute;
   right: 0;
   bottom: -40px;
   height: 40px;
   width: 40px;
-  background-color: #4070F4;
+  background-color: #4070f4;
   border: none;
 }
-.overlay::after{
+.overlay::after {
   border-radius: 0 25px 0 0;
-  background-color: #FFF;
+  background-color: #fff;
   border: none;
 }
-.card-image{
+.card-image {
   position: relative;
   height: 150px;
   width: 150px;
   border-radius: 50%;
-  background: #FFF;
+  background: #fff;
   padding: 3px;
 }
-.card-image .card-img{
+.card-image .card-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #4070F4;
-  
-}
-.name{
-  font-size: 18px;
-  font-weight: 500;
-  color: #333;
-}
-.description{
-  font-size: 14px;
-  color: #707070;
-  text-align: center;
-}
-.button{
-  border: none;
-  font-size: 16px;
-  color: #FFF;
-  padding: 8px 16px;
-  background-color: #4070F4;
-  border-radius: 6px;
-  margin: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.button:hover{
-  background: #06143b;
+  user-select: none;
+  margin-left: 100px;
+  width: calc(100%-150px);
 }
 
-.swiper-navBtn{
-  color: #6E93f7;
+.swiper-navBtn {
+  color: #6e93f7;
   transition: color 0.3s ease;
 }
-.swiper-navBtn:hover{
+.swiper-navBtn:hover {
   color: #081539;
 }
 .swiper-navBtn::before,
-.swiper-navBtn::after{
+.swiper-navBtn::after {
   font-size: 35px;
 }
-.swiper-button-next{
+.swiper-button-next {
   right: 0;
 }
-.swiper-button-prev{
+.swiper-button-prev {
   left: 0;
 }
-.swiper-pagination-bullet{
-  background-color: #6E93f7;
+.swiper-pagination-bullet {
+  background-color: #6e93f7;
   opacity: 1;
 }
-.swiper-pagination-bullet-active{
-  background-color: #4070F4;
+.swiper-pagination-bullet-active {
+  background-color: #4070f4;
 }
-span .overlay{
+span .overlay {
   border-radius: 10px;
 }
 
 @media screen and (max-width: 768px) {
-  .slide-content{
+  .slide-content {
     margin: 5 10px;
   }
-  .swiper-navBtn{
+  .swiper-navBtn {
     display: none;
   }
- 
 }
 
-.medsos-icon{
+.medsos-icon {
   margin-top: 10px;
   margin-right: 13px;
   text-decoration-line: none;
   letter-spacing: 0px;
   width: 30px;
   padding-left: 13px;
-
 }
 /* 
 section .akreditasi::before{
@@ -317,3 +329,266 @@ section .akreditasi::after{
   left: calc(50% - 20px);
   z-index: 1;
 } */
+
+.dropdown .dropdown-menu{
+  display: none;
+}
+
+.dropdown:hover > .dropdown-menu, .dropend:hover > .dropdown-menu{
+  display: block;
+  margin-top: .125em;
+}
+
+.dropend:hover > .dropdown-menu{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: .125em;
+}
+
+@media screen and (min-width:769px) {
+  .dropend:hover > .dropdown-menu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+}
+
+a,
+a:visited {
+  color: #000;
+  outline: none;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:visited:hover {
+  color: #c42245;
+  text-decoration: none;
+}
+
+nav {
+    display: block;
+    background: #e3e3e3;
+    width: 100%;
+}
+
+.menu {
+    display: block;
+}
+
+.menu li {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+}
+
+.menu li:first-child {
+    margin-left: 0;
+}
+
+.menu li a {
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 10px 5px;
+    display: block;
+    color: #000;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.menu li a:hover,.menu li:hover>a {
+    color: #e3e3e3;
+    background: #ff3c41;
+}
+
+.menu ul {
+    visibility: hidden;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    width: 150px;
+    position: absolute;
+    left: 0px;
+    background: #e3e3e3;
+    z-index: 99;
+    transform: translate(0,20px);
+    transition: all 0.2s ease-out;
+}
+
+.menu ul:after {
+    bottom: 100%;
+    left: 20%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #e3e3e3;
+    border-width: 6px;
+    margin-left: -6px;
+}
+
+.menu ul li {
+    display: block;
+    float: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li a {
+    font-size: 12px;
+    font-weight: normal;
+    display: block;
+    color: #797979;
+    background: #e3e3e3;
+}
+
+.menu ul li a:hover,.menu ul li:hover>a {
+    background: #ff3c41;
+    color: #e3e3e3;
+}
+
+.menu li:hover>ul {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.menu ul ul {
+    left: 149px;
+    top: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(20px,20px);
+    transition: all 0.2s ease-out;
+}
+
+.menu ul ul:after {
+    left: -6px;
+    top: 10%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-right-color: #e3e3e3;
+    border-width: 6px;
+    margin-top: -6px;
+}
+
+.menu li>ul ul:hover {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.responsive-menu {
+    display: none;
+    width: 100%;
+    padding: 20px 15px;
+    background: #e3e3e3;
+    color: #e3e3e3;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.responsive-menu:hover {
+    color: #e3e3e3;
+    text-decoration: none;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .mainWrap {
+        width: 768px;
+    }
+
+    .menu ul {
+        top: 37px;
+    }
+
+    .menu li a {
+        font-size: 12px;
+    }
+
+    a.homer {
+        background: #374147;
+    }
+}
+@media (max-width: 768px) {
+  .menu.responsive {
+    display: block;
+  }
+  .menu.responsive li {
+    float: none;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+    .mainWrap {
+        width: auto;
+        padding: 50px 20px;
+    }
+
+    .menu.responsive {
+        display: none;
+    }
+
+    .responsive-menu {
+        display: block;
+    }
+
+    nav {
+        margin: 0;
+        background: none;
+    }
+
+    .menu li {
+        display: block;
+        margin: 0;
+    }
+
+    .menu li a {
+        background: #fff;
+        color: #797979;
+    }
+
+    .menu li a:hover,.menu li:hover>a {
+        background: #ff3c41;
+        color: #e3e3e3;
+    }
+
+    .menu ul {
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        width: 100%;
+        transform: initial;
+    }
+
+    .menu li:hover>ul {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        transform: initial;
+    }
+
+    .menu ul ul {
+        left: 0;
+        transform: initial;
+    }
+
+    .menu li>ul ul:hover {
+        transform: initial;
+    }
+}
+
+
