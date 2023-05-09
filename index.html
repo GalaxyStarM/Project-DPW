@@ -15,6 +15,107 @@
 </head>
 
 <body>
+  <style>
+    
+.card {
+  border-radius: 25px 25px 25px 25px;
+  background-color: #fff;
+}
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 25px;
+}
+.card-content {
+  z-index: 1;
+}
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4070f4;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #4070f4;
+  border: none;
+}
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #fff;
+  border: none;
+}
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 3px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 100px;
+  width: calc(100%-150px);
+}
+
+.swiper-navBtn {
+  color: #6e93f7;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover {
+  color: #081539;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 35px;
+}
+.swiper-button-next {
+  right: 0;
+}
+.swiper-button-prev {
+  left: 0;
+}
+.swiper-pagination-bullet {
+  background-color: #6e93f7;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background-color: #4070f4;
+}
+span .overlay {
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 5 10px;
+  }
+  .swiper-navBtn {
+    display: none;
+  }
+}
+  </style>
   <header class="header">
     <div class="top-bar d-none d-lg-block">
       <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000033;">
@@ -131,13 +232,13 @@
 
                       <li><a href="#"><i class="fa fa-tags"></i> GALERI</a>
                         <ul class="sub-menu">
-                          <li><a href="#">Foto</a></li>
-                          <li><a href="#">Video</a>
+                          <li><a href="foto.html">Foto</a></li>
+                          <li><a href="video.html">Video</a>
                           <li>
-                          <li><a href="#">Virtual Tour</a></li>
+                          <li><a href="virtualtour.html">Virtual Tour</a></li>
                         </ul>
                       </li>
-                      <li><a href="#"><i class="fa fa-envelope"></i> CONTACT</a></li>
+                      <li><a href="kontak.html"><i class="fa fa-envelope"></i> CONTACT</a></li>
                     </ul>
                   </div>
               </div>
@@ -211,13 +312,13 @@
 
         <li><a href="#"><i class="fa fa-tags"></i> GALERI</a>
           <ul class="sub-menu">
-            <li><a href="#">Foto</a></li>
-            <li><a href="#">Video</a>
+            <li><a href="foto.html">Foto</a></li>
+            <li><a href="video.html">Video</a>
             <li>
-            <li><a href="#">Virtual Tour</a></li>
+            <li><a href="virtualtour.html">Virtual Tour</a></li>
           </ul>
         </li>
-        <li><a href="#"><i class="fa fa-envelope"></i> CONTACT</a></li>
+        <li><a href="kontak.html"><i class="fa fa-envelope"></i> CONTACT</a></li>
       </ul> 
 
     </div>
@@ -276,8 +377,8 @@
                 <span style=" font-size: 35px;  color: #ffa804;"><strong>15</strong></span>
                 <span style=" font-size: 15px; color: #0a0000;"><br><b>JUN</b></span>
               </span>
-              <h6 style="text-align: left;"><a href="#" style="text-decoration: none; color: black;">Prof Azriyenni Guru Besar Teknik Elektro Pertama di Riau</a></h6>
-              <h6 style="text-align: left; padding-top: 11.5px;"><a href=""> Selanjutnya></a></h6>
+              <h6 style="text-align: left;"><a href="berita1.html" style="text-decoration: none; color: black;">Prof Azriyenni Guru Besar Teknik Elektro Pertama di Riau</a></h6>
+              <h6 style="text-align: left; padding-top: 11.5px;"><a href="berita1.html"> Selanjutnya></a></h6>
 						</div>
 					</div>
 				</div>
@@ -303,7 +404,7 @@
                 <span style=" font-size: 15px; color: #0a0000;"><br><b>JUL</b></span>
               </span>
               <h6 style="text-align: left;"><a href="#" style="text-decoration: none; color: black;">Dr. Azriyenni, ST., M.Eng Wakil Dekan bidang Kemahasiswaan..</a></h6>
-              <h6 style="text-align: left; padding-top: 11.5px;"><a href=""> Selanjutnya></a></h6>
+              <h6 style="text-align: left; padding-top: 11.5px;"><a href="berita1.html"> Selanjutnya></a></h6>
 						</div>
 					</div>
 				</div>
