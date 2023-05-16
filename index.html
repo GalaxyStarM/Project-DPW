@@ -6,718 +6,628 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
+
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Customized Bootstrap Stylesheet -->
+  <link rel="stylesheet" href="lib/css/bootstrap.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"> -->
+
+  <!-- Template Stylesheet -->
+  <link href="lib/css/style2.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+
+  <!-- Libraries Stylesheet -->
+  <link rel="stylesheet" href="lib/owlcarousel/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="lib/owlcarousel/assets/owl.carousel.min.css">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 </head>
 
+<style>
+  ul{list-style: none;}
+  li{list-style: none;}
+
+  .carousel-caption {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 40%;
+    z-index: 1;
+  }
+
+</style>
+
 <body>
-  <style>
-    
-.card {
-  border-radius: 25px 25px 25px 25px;
-  background-color: #fff;
-}
-.image-content,
-.card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 10px 14px;
-  border-bottom: 25px;
-}
-.card-content {
-  z-index: 1;
-}
-.image-content {
-  position: relative;
-  row-gap: 5px;
-  padding: 25px 0;
-}
-.overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #4070f4;
-  border-radius: 25px 25px 0 25px;
-}
-.overlay::before,
-.overlay::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -40px;
-  height: 40px;
-  width: 40px;
-  background-color: #4070f4;
-  border: none;
-}
-.overlay::after {
-  border-radius: 0 25px 0 0;
-  background-color: #fff;
-  border: none;
-}
-.card-image {
-  position: relative;
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  background: #fff;
-  padding: 3px;
-}
-.card-image .card-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  user-select: none;
-  margin-left: 100px;
-  width: calc(100%-150px);
-}
+  <!-- Spinner Start -->
+  <div id="spinner" class="show position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner"></div>
+  </div>
+  <!-- Spinner End -->
 
-.swiper-navBtn {
-  color: #6e93f7;
-  transition: color 0.3s ease;
-}
-.swiper-navBtn:hover {
-  color: #081539;
-}
-.swiper-navBtn::before,
-.swiper-navBtn::after {
-  font-size: 35px;
-}
-.swiper-button-next {
-  right: 0;
-}
-.swiper-button-prev {
-  left: 0;
-}
-.swiper-pagination-bullet {
-  background-color: #6e93f7;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active {
-  background-color: #4070f4;
-}
-span .overlay {
-  border-radius: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .slide-content {
-    margin: 5 10px;
-  }
-  .swiper-navBtn {
-    display: none;
-  }
-}
-  </style>
-  <header class="header">
-    <div class="top-bar d-none d-lg-block">
-      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #000033;">
-        <div class="container">
-          <a class="navbar-brand" href="#"><span class="text-warning"></span></a>
-          <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-            class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse"
-            type="button"><span class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul id="nav-atas" class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="Universitas">Universitas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Fakultas">Fakultas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Jurusan">Jurusan</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Unduh Brosur">Unduh Brosur</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Pendaftaran">Pendaftaran</a>
-              </li>
-            </ul>
-          </div>
-      </nav>
-    </div>
-    <div class="bottom-bar">
-      <nav class="navbar navbar-expand-lg" style="background-color: #E3E3E3; height: 124px; flex-flow: row;">
-        <div class="container" style="z-index: 1;">
-          <!-- <div class="row align-items-end"> -->
-          <div class="col-xl-2 col-lg-2" style="width: 144px;">
-            <div class="navbar-kotak-logo">
-              <img src="Asset/logounriputih.png" alt="Universitas Riau" class="img-responsive" style="height: 100px;">
-              <div class="segitiga-navbar"></div>
-
+  <!-- Topbar Start -->
+  <div class="container-fluid" style="background-color: #091E3E;">
+    <nav class="navbar navbar-expand-lg px-5 d-none d-lg-block">
+      <div class="row gx-0">
+        <div class="col-lg-8 text-lg-end ms-auto mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center" style="height: 45px;">
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="https://unri.ac.id/" style="color: #ffffff;"> Universitas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://ft.unri.ac.id/" style="color: #ffffff;"> Fakultas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://ee.ft.unri.ac.id/" style="color: #ffffff;"> Jurusan</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://informatika.ft.unri.ac.id/wp-content/uploads/Brosur-TI-2021.pdf" style="color: #ffffff;"> Unduh Brosur</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="https://pmb.unri.ac.id/" style="color: #ffffff;"> Pendaftaran</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
+        </div>
+      </div>
+    </nav>
+</div>
 
-          <!-- Logo -->
-          <div class="col-xl-3 col-lg-3">
-            <h4 style="font-size: 22px;">PROGRAM STUDI
-              <br> S1 TEKNIK
-              <br> INFORMATIKA
-            </h4>
-          </div>
-          <div class="col-xl-7 col-lg-7 nav-samping d-none d-md-block">
-            <div class="bg-body-tertiary" style="margin-left: 0px;">
-              <div class="container-fluid" style="margin: 20px 0px 0px 0px;">
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                    style="border-radius: 50rem;">
-                </form>
-                <nav>
-                  <div class="clearfix" style="clear: both;">
-                    <a id="resp-menu" class="responsive-menu" href="#"><i class="fa fa-reorder" type="button"></i></a>
-                    <ul class="menu">
-                      <li><a class="homer" href="#"><i class="fa fa-home"></i> BERANDA</a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa fa-user"></i> PROFIL</a>
-                        <ul>
-                          <li><a href="#">Sejarah</a></li>
-                          <li><a href="#">Visi dan Misi</a></li>
-                          <li><a href="#">Tujuan</a></li>
-                          <li><a href="#">Sasaran</a></li>
-                          <li><a href="#">Strategi</a></li>
-                          <li><a href="#">Akreditasi</a></li>
-                          <li><a href="#">Dosen</a></li>
-                          <li><a href="#">Tenaga Kependidikan</a></li>
-                          <li><a href="#">Laboratorium</a>
-                            <ul class="sub-menu">
-                              <li><a href="#">Lab. Jaringan Komputer</a></li>
-                              <li><a href="#">Lab. Rekayasa Perangkat Lunak</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="#"><i class="fa fa-camera"></i> AKADEMIK</a>
-                        <ul class="sub-menu">
-                          <li><a href="#">Kurikulum</a></li>
-                          <li><a href="#">Jadwal Kuliah</a></li>
-                          <li><a href="#">Kalender Akademik</a></li>
-                          <li><a href="#">RPS</a></li>
-                          <li><a href="#">Tracer Study</a>
-                            <ul>
-                              <li><a href="#">Tracer Study 2022</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="#">Layanan KP</a>
-                            <ul>
-                              <li><a href="#">Download Dokumen KP</a></li>
-                              <li><a href="#">Form Isian KP</a></li>
-                              <li><a href="#">Jadwal Seminar KP</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="#">Layanan Skripsi</a>
-                            <ul>
-                              <li><a href="#">Download Dokumen Skripsi</a></li>
-                              <li><a href="#">Form Isian Skripsi</a></li>
-                              <li><a href="#">Jadwal SEMPRO/ Sidang SKRIPSI</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="#">SITEI (Akademik)</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="#"><i class="fa fa-bullhorn"></i> TUK</a>
-                        <ul class="sub-menu">
-                          <li><a href="#">Mikrotik Academy</a></li>
-                        </ul>
-                      </li>
+  <!-- Topbar End -->
 
-                      <li><a href="#"><i class="fa fa-tags"></i> GALERI</a>
-                        <ul class="sub-menu">
-                          <li><a href="foto.html">Foto</a></li>
-                          <li><a href="video.html">Video</a>
-                          <li>
-                          <li><a href="virtualtour.html">Virtual Tour</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="kontak.html"><i class="fa fa-envelope"></i> CONTACT</a></li>
+<!-- Navbar & Carousel Start -->
+<div class="container-fluid position-relative p-0">
+    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+      <div class="navbar-kotak-logo">
+        <a href="index.html">
+          <img src="Asset/logounriputih.png" alt="Universitas Riau" class="img-responsive" style="height: 100px;">
+        </a>
+        <div class="d-none d-lg-block" id="segitiga-navbar"></div>
+      </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="fa fa-bars"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+              <a href="index.html" class="nav-item nav-link active">Beranda</a>
+              <!-- Dropdown Profil -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                  data-mdb-toggle="dropdown" aria-expanded="false">
+                  Profil
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a href="sejarah.html" class="dropdown-item">Sejarah</a></li>
+                  <li><a href="visidanmisi.html" class="dropdown-item">Visi & Misi</a></li>
+                  <li><a href="tujuan.html" class="dropdown-item">Tujuan</a></li>
+                  <li><a href="sasaran.html" class="dropdown-item">Sasaran</a></li>
+                  <li><a href="strategi.html" class="dropdown-item">Strategi</a></li>
+                  <li><a href="akreditasi.html" class="dropdown-item">Akreditasi</a></li>
+                  <li><a href="dosen.html" class="dropdown-item">Dosen</a></li>
+                  <li><a href="tenagakpd.html" class="dropdown-item">Tenaga Kependidikan</a></li>
+                  <li>
+                    <button class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#laboratorium"> Laboratorium
+                      &raquo; </button>
+                    <ul class="collapse" id="laboratorium">
+                      <li><a class="dropdown-item" href="labjarkom.html">Lab. Jaringan Komputer</a></li>
+                      <li><a href="laprpl.html" class="dropdown-item">Lab. Rekayasa Perangkat Lunak</a></li>
                     </ul>
-                  </div>
-              </div>
+                  </li>
+                </ul>
+              </li>
+               <!-- Dropdown Akademik -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkRight" role="button"
+                  data-mdb-toggle="dropdown" aria-expanded="false">
+                  Akademik
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkRight">
+                  <li><a class="dropdown-item" href="kurikulum.html">Kurikulum</a></li>
+                  <li><a class="dropdown-item" href="jadwalkuliah.html">Jadwal Kuliah</a></li>
+                  <li><a href="kalenderakademik.html" class="dropdown-item">Kalender Akademik</a></li>
+                  <li><a href="rps.html" class="dropdown-item">RPS</a></li>
+                  <li>
+                    <button class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#tracerStudy"> Tracer Study
+                      &raquo; </button>
+                    <ul class="collapse" id="tracerStudy">
+                      <li>
+                        <a class="dropdown-item" href="https://drive.google.com/open?id=1UYZwySIeqpyxSBateBZWbia6V8wjg4tO&authuser=informatika%40eng.unri.ac.id&usp=drive_fs">Tracer Study 2022</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#layananKp"> Layanan KP
+                      &raquo; </button>
+                    <ul class="collapse" id="layananKp">
+                      <li><a href="https://classroom.google.com/u/0/c/MTIwOTM4MDc3MzNa/m/NDY4MjEwMDg2MjQz/details" class="dropdown-item">Download Dokumen KP</a></li>
+                      <li><a href="https://classroom.google.com/u/0/c/MTIwOTM4MDc3MzNa/m/NDc1MDc3ODI0NTkx/details" class="dropdown-item">Form Isian KP</a></li>
+                      <li><a href="https://classroom.google.com/u/0/c/MTIwOTM4MDc3MzNa/m/NTMyMjQxOTY1NTM4/details" class="dropdown-item">Jadwal Seminar KP</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <button class="dropdown-item" data-bs-toggle="collapse" data-bs-target="#layananSkripsi">
+                      Layanan Skripsi &raquo;
+                    </button>
+                    <ul class="collapse" id="layananSkripsi">
+                      <li><a href="https://classroom.google.com/u/0/c/MTIwOTM4MDc3MzNa/m/NDc1MDc3ODI0NDEz/details" class="dropdown-item">Download Dokumen Skripsi</a></li>
+                      <li><a href="https://classroom.google.com/u/0/c/MTIwOTM4MDc3MzNa/m/NDc1MDc4MTM1MzY2/details" class="dropdown-item">Form Isian Skripsi</a></li>
+                      <li><a href="https://classroom.google.com/u/0/c/MTIwOTM4MDc3MzNa/m/NTMyMjQxOTY1Mjc5/details" class="dropdown-item">Jadwal SEMPRO/ Sidang SKRIPSI</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="https://sitei.ft.unri.ac.id/" class="dropdown-item">SITEI (Akademik)</a></li>
+                </ul>
+              </li>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkRight" role="button"
+                    data-mdb-toggle="dropdown" aria-expanded="false">TUK </a>
+                    <div class="dropdown-menu m-0">
+                        <a href="tuk.html" class="dropdown-item">Informatika UNRI (BNSP)</a>
+                        <a href="mikrotikakademik" class="dropdown-item">Mikrotik Academy</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkRight" role="button"
+                    data-mdb-toggle="dropdown" aria-expanded="false">Galeri </a>
+                    <div class="dropdown-menu m-0">
+                        <a href="foto.html" class="dropdown-item">Foto</a>
+                        <a href="video.html" class="dropdown-item">Video</a>
+                        <a href="virtualtour.html" class="dropdown-item">Virtual Tour</a>
+                    </div>
+                </div>
+                <a href="kontak.html" class="nav-item nav-link">Kontak</a>
             </div>
-          </div>
-          <div class="d-flex d-md-none align-items-center gap-2">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <a class="btn" data-bs-toggle="collapse" href="#navMenu" role="button" aria-expanded="false"
-              aria-controls="navMenu">
-              <i class="fa fa-bars"></i>
-            </a>
-          </div>
-      </nav>
-      <ul class="collapse menu " id="navMenu" style="padding-left: 0px;">
-        <li><a class="homer" href="#"><i class="fa fa-home"></i>BERANDA</a>
-        </li>
-        <li class="dropdown">
-          <a class="" href="#" data-bs-target="profile-collapse" aria-controls="profile-collapse">
-            <i class="fa fa-user"></i> PROFIL
-          </a>
-          <ul class="menu">
-            <li><a href="#">Sejarah</a></li>
-            <li><a href="#">Visi dan Misi</a></li>
-            <li><a href="#">Tujuan</a></li>
-            <li><a href="#">Sasaran</a></li>
-            <li><a href="#">Strategi</a></li>
-            <li><a href="#">Akreditasi</a></li>
-            <li><a href="#">Dosen</a></li>
-            <li><a href="#">Tenaga Kependidikan</a></li>
-            <li><a href="#">Laboratorium</a>
-              <ul class="sub-menu">
-                <li><a href="#">Lab. Jaringan Komputer</a></li>
-                <li><a href="#">Lab. Rekayasa Perangkat Lunak</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li><a href="#"><i class="fa fa-camera"></i> AKADEMIK</a>
-          <ul class="sub-menu">
-            <li><a href="#">Kurikulum</a></li>
-            <li><a href="#">Jadwal Kuliah</a></li>
-            <li><a href="#">Kalender Akademik</a></li>
-            <li><a href="#">RPS</a></li>
-            <li><a href="#">Tracer Study</a>
-              <ul>
-                <li><a href="#">Tracer Study 2022</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Layanan KP</a>
-              <ul>
-                <li><a href="#">Download Dokumen KP</a></li>
-                <li><a href="#">Form Isian KP</a></li>
-                <li><a href="#">Jadwal Seminar KP</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Layanan Skripsi</a>
-              <ul>
-                <li><a href="#">Download Dokumen Skripsi</a></li>
-                <li><a href="#">Form Isian Skripsi</a></li>
-                <li><a href="#">Jadwal SEMPRO/ Sidang SKRIPSI</a></li>
-              </ul>
-            </li>
-            <li><a href="#">SITEI (Akademik)</a></li>
-          </ul>
-        </li>
-        <li><a href="#"><i class="fa fa-bullhorn"></i> TUK</a>
-          <ul class="sub-menu">
-            <li><a href="#">Mikrotik Academy</a></li>
-          </ul>
-        </li>
+            <butaton type="button" class="btn text-primary ms-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
+        </div>
+    </nav>
 
-        <li><a href="#"><i class="fa fa-tags"></i> GALERI</a>
-          <ul class="sub-menu">
-            <li><a href="foto.html">Foto</a></li>
-            <li><a href="video.html">Video</a>
-            <li>
-            <li><a href="virtualtour.html">Virtual Tour</a></li>
-          </ul>
-        </li>
-        <li><a href="kontak.html"><i class="fa fa-envelope"></i> CONTACT</a></li>
-      </ul> 
-
+    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="w-100" src="Asset/banner-1.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="Asset/banner-2.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="Asset/banner-3.jpg" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="w-100" src="Asset/poster-web.png" alt="Image">
+                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-  </header>
-  <div class="clearfix" style="clear: both;">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="Asset/banner-1.jpg" class="d-block w-100" alt="banner-1">
+</div>
+<!-- Navbar & Carousel End -->
+
+<!-- Full Screen Search Start -->
+<div class="modal fade" id="searchModal" tabindex="-1">
+  <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+          <div class="modal-header border-0">
+              <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body d-flex align-items-center justify-content-center">
+              <div class="input-group" style="max-width: 600px;">
+                  <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                  <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Full Screen Search End -->
+  <!-- Facts Start -->
+  <div class="container-fluid facts py-5 pt-lg-0">
+    <div class="container py-5 pt-lg-0">
+        <div class="row gx-0">
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.1s">
+                <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                    <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                        <i class="fa fa-users text-primary"></i>
+                    </div>
+                    <div class="ps-4" style="text-align: center;">
+                        <h5 class="text-white mb-0">Jumlah Mahasiswa</h5>
+                        <h1 class="text-white mb-0 counter" data-toggle="counter-up">396</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.3s">
+                <div class="bg-light shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                    <div class="bg-primary d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                        <i class="fa fa-user-tie text-white"></i>
+                    </div>
+                    <div class="ps-4" style="text-align: center;">
+                        <h5 class="text-primary mb-0">Dosen</h5>
+                        <h1 class="mb-0 counter" data-toggle="counter-up">12</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow zoomIn" data-wow-delay="0.6s">
+                <div class="bg-primary shadow d-flex align-items-center justify-content-center p-4" style="height: 150px;">
+                    <div class="bg-white d-flex align-items-center justify-content-center rounded mb-2" style="width: 60px; height: 60px;">
+                        <i class="fa fa-calendar text-primary"></i>
+                    </div>
+                    <div class="ps-4" style="text-align: center;">
+                        <h5 class="text-white mb-0">Tahun Berdiri</h5>
+                        <h1 class="text-white mb-0 counter" data-toggle="counter-up">2014</h1>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="carousel-item">
-          <img src="Asset/banner-2.jpg" class="d-block w-100" alt="banner-2">
+    </div>
+  </div>
+  <!-- Facts Start -->
+
+  <!-- Berita Start -->
+  <section>
+    <div class="Berita">
+      <div class="container fadeInUp">
+        <div class="section-title text-center position-relative pb-3 mb-5">
+          <h1 class="mb-0">BERITA</h1>
         </div>
-        <div class="carousel-item">
-          <img src="Asset/banner-3.jpg" class="d-block w-100" alt="banner-3">
-        </div>
-        <div class="carousel-item">
-          <img src="Asset/banner-4.jpg" class="d-block w-100" alt="banner-4">
-        </div>
-        <div class="carousel-item">
-          <img src="Asset/poster-web.png" class="d-block w-100" alt="poster-web">
+      <!-- <div class="garis-berita" style="font-size: 20px;"> -->
+    </div>
+  </div>
+</section>
+<section class="acara section-padding">
+  <div class="container">
+    <div class="row">
+      <div class=" col-12 col-md-12 col-lg-4 pb-4 fadeInUp">
+        <div class="shadow card text-light text-center bg-white pb-2">
+          <div class="card-body text-dark ">
+            <div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/Profaz2.jpg" style="border-radius: 25px;"></div>
+            <span class="tanggal kegiatan" style="border-color:#4070f4; background-color: #ffffff; display: block; float: left; width: 40px; text-align: center; white-space: nowrap; margin-right: 25px; border-bottom-width: 3px; border-bottom-style: solid; padding-bottom: 7px; margin-top: -11px;">
+              <span style=" font-size: 35px;  color: #4070f4;"><strong>15</strong></span>
+              <span style=" font-size: 15px; color: #0a0000;"><br><b>JUN</b></span>
+            </span>
+            <h6 style="text-align: left;"><a href="berita1.html" style="text-decoration: none; color: black;">Prof Azriyenni Guru Besar Teknik Elektro Pertama di Riau...</a></h6>
+            <h6 style="text-align: left; padding-top: 11.5px;"><a href="berita1.html" style="text-decoration-color: #4070f4;"> Selanjutnya></a></h6>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="col-12 col-md-12 col-lg-4 pb-4 fadeInUp">
+        <div class="shadow card text-light text-center bg-white pb-2">
+          <div class="card-body text-dark ">
+            <div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/pakirsan.jpg" style="border-radius: 25px;"></div>
+            <span class="tanggal kegiatan" style="border-color: #4070f4; background-color: #ffffff; display: block; float: left; width: 40px; text-align: center; white-space: nowrap; margin-right: 25px; border-bottom-width: 3px; border-bottom-style: solid; padding-bottom: 7px; margin-top: -10px;">
+              <span style=" font-size: 35px;  color: #4070f4;"><strong>21</strong></span>
+              <span style=" font-size: 15px; color: #0a0000;"><br><b>JUL</b></span>
+            </span>
+            <h6 style="text-align: left;"><a href="berita2.html" style="text-decoration: none; color: black;">Dr. Irsan Taufik Ali, ST., MT dosen Prodi Teknik Informatika meraih...</a></h6>
+            <h6 style="text-align: left; padding-top: 10px;"><a href="berita2.html" style="text-decoration-color: #4070f4;"> Selanjutnya></a></h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4 pb-4 slideInUp">
+        <div class="shadow card text-light text-center bg-white pb-2 ">
+          <div class="card-body text-dark">
+            <div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/dekanft.jpg" style="border-radius: 25px;"></div>
+            <span class="tanggal kegiatan" style="border-color: #4070f4; background-color: #ffffff; display: block; float: left; width: 40px; text-align: center; white-space: nowrap; margin-right: 25px; border-bottom-width: 3px; border-bottom-style: solid; padding-bottom: 7px; margin-top: -10px;">
+              <span style=" font-size: 35px;  color: #4070f4;"><strong>12</strong></span>
+              <span style=" font-size: 15px; color: #0a0000;"><br><b>JUL</b></span>
+            </span>
+            <h6 style="text-align: left;"><a href="berita3.html" style="text-decoration: none; color: black;">Dr. Azriyenni, ST., M.Eng Wakil Dekan bidang Kemahasiswaan...</a></h6>
+            <h6 style="text-align: left; padding-top: 10px;"><a href="berita3.html" style="text-decoration-color: #4070f4;"> Selanjutnya></a></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="panel" style="padding: 10px;">
+  <div class="d-grid gap-2" style="justify-content: center;">
+    <button class="btn btn-primary" type="button" >Selengkapnya</button>
+  </div>
+</section>
+<!-- End Berita  -->
+
+  <!-- Konten Kegiatan -->
+  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="section-title text-center position-relative pb-3 mb-5">
+            <h1 class="mb-0">KEGIATAN</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-4 col-12 wow slideInUp" data-wow-delay="0.3s">
+                <div class="blog-item bg-light rounded overflow-hidden">
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="Asset/Kegiatan Baru/FGADTS22.jpg" alt="" style="width: 100%; height: 400px;">
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex mb-3">
+                            <small class="me-3"><i class="far fa-user text-primary me-2"></i>Dian Ramadhani</small>
+                            <small><i class="far fa-calendar-alt text-primary me-2"></i>13 Jul, 2022</small>
+                        </div>
+                        <h4 class="mb-3">[EVENT] Orientasi Program FGA DTS 2022</h4>
+                        <a class="text-uppercase" href=""> <br> Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 wow col-12 slideInUp" data-wow-delay="0.6s">
+                <div class="blog-item bg-light rounded overflow-hidden">
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="Asset/Kegiatan Baru/data-analytics.jpg" alt="" style="width: 100%; height: 400px;">
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex mb-3">
+                            <small class="me-3"><i class="far fa-user text-primary me-2"></i>Dian Ramadhani</small>
+                            <small><i class="far fa-calendar-alt text-primary me-2"></i>17 Jun, 2022</small>
+                        </div>
+                        <h4 class="mb-3" href="">[EVENT] KULIAH UMUM : Data Analytics for Health Sector</h4>
+                        <a class="text-uppercase" href=""> <br> Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12 wow slideInUp" data-wow-delay="0.9s">
+                <div class="blog-item bg-light rounded overflow-hidden">
+                    <div class="blog-img position-relative overflow-hidden">
+                        <img class="img-fluid" src="Asset/Kegiatan Baru/HOWTOCREAT2.jpg" alt="" style="width: 100%; height: 400px;">
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex mb-3">
+                            <small class="me-3"><i class="far fa-user text-primary me-2"></i>Dian Ramadhani</small>
+                            <small><i class="far fa-calendar-alt text-primary me-2"></i>15 Jun, 2022</small>
+                        </div>
+                        <h4 class="mb-3">[EVENT] WEBINAR : How to Create a Project/Research Poster</h4>
+                        <a class="text-uppercase" href="">Read More <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- Kemitraan Start -->
+  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="section-title text-center position-relative pb-3 mb-5">
+        <h1 class="mb-0">KEMITRAAN</h1>
+      </div>
+        <div class="owl-carousel owl-theme slideInUp">
+          <img src="Asset/kemitraan/logo-bps-1.jpg" alt="img">
+          <img src="Asset/kemitraan/logo-cisco.jpg" alt="img">
+          <img src="Asset/kemitraan/logo-esri-1.jpg" alt="img">
+          <img src="Asset/kemitraan/logo-kemenkominfo.jpg" alt="img">
+          <img src="Asset/kemitraan/logo-microsoft.jpg" alt="img">
+          <img src="Asset/kemitraan/logo-mikrotik.jpg" alt="img">
+          <img src="Asset/kemitraan/logo-oracle.jpg" alt="img">
+          <img src="Asset/kemitraan/logo-redhat-1.jpg" alt="img">
+        </div>
+      </div>
+      <!-- Kemitraan End -->
     </div>
   </div>
 
-
-  <section>
-      <div class="Berita">
-        <div class="d-flex">
-          <h4 class="title-content" style="width: 65px;">Berita</h4>
-        <hr color="#7ac943" width="85%" style="margin-left: 2px; height: 4px; opacity: 100%; border: none;">
-        <!-- <div class="garis-berita" style="font-size: 20px;"> -->
-      </div>
-    </div>
-  </section>
-   
-  <section class="acara section-padding">
+   <!-- Footer -->
+  <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
-      <div class="row">
-        <div class=" col-12 col-md-12 col-lg-4 pb-4">
-					<div class="shadow card text-light text-center bg-white pb-2">
-						<div class="card-body text-dark ">
-							<div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/Profaz2.jpg" style="border-radius: 25px;"></div>
-              <span class="tanggal kegiatan" style="border-color:#4070f4; background-color: #ffffff; display: block; float: left; width: 40px; text-align: center; white-space: nowrap; margin-right: 25px; border-bottom-width: 3px; border-bottom-style: solid; padding-bottom: 7px; margin-top: -11px;">
-                <span style=" font-size: 35px;  color: #4070f4;"><strong>15</strong></span>
-                <span style=" font-size: 15px; color: #0a0000;"><br><b>JUN</b></span>
-              </span>
-              <h6 style="text-align: left;"><a href="berita1.html" style="text-decoration: none; color: black;">Prof Azriyenni Guru Besar Teknik Elektro Pertama di Riau...</a></h6>
-              <h6 style="text-align: left; padding-top: 11.5px;"><a href="berita1.html" style="text-decoration-color: #4070f4;"> Selanjutnya></a></h6>
-						</div>
-					</div>
-				</div>
-        <div class="col-12 col-md-12 col-lg-4 pb-4">
-					<div class="shadow card text-light text-center bg-white pb-2">
-						<div class="card-body text-dark ">
-							<div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/pakirsan.jpg" style="border-radius: 25px;"></div>
-              <span class="tanggal kegiatan" style="border-color: #4070f4; background-color: #ffffff; display: block; float: left; width: 40px; text-align: center; white-space: nowrap; margin-right: 25px; border-bottom-width: 3px; border-bottom-style: solid; padding-bottom: 7px; margin-top: -10px;">
-                <span style=" font-size: 35px;  color: #4070f4;"><strong>21</strong></span>
-                <span style=" font-size: 15px; color: #0a0000;"><br><b>JUL</b></span>
-              </span>
-              <h6 style="text-align: left;"><a href="berita2.html" style="text-decoration: none; color: black;">Dr. Irsan Taufik Ali, ST., MT dosen Prodi Teknik Informatika meraih...</a></h6>
-              <h6 style="text-align: left; padding-top: 10px;"><a href="berita2.html" style="text-decoration-color: #4070f4;"> Selanjutnya></a></h6>
-						</div>
-					</div>
-				</div>
-        <div class="col-12 col-md-12 col-lg-4 pb-4">
-					<div class="shadow card text-light text-center bg-white pb-2 ">
-						<div class="card-body text-dark">
-							<div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/dekanft.jpg" style="border-radius: 25px;"></div>
-              <span class="tanggal kegiatan" style="border-color: #4070f4; background-color: #ffffff; display: block; float: left; width: 40px; text-align: center; white-space: nowrap; margin-right: 25px; border-bottom-width: 3px; border-bottom-style: solid; padding-bottom: 7px; margin-top: -10px;">
-                <span style=" font-size: 35px;  color: #4070f4;"><strong>12</strong></span>
-                <span style=" font-size: 15px; color: #0a0000;"><br><b>JUL</b></span>
-              </span>
-              <h6 style="text-align: left;"><a href="berita3.html" style="text-decoration: none; color: black;">Dr. Azriyenni, ST., M.Eng Wakil Dekan bidang Kemahasiswaan...</a></h6>
-              <h6 style="text-align: left; padding-top: 10px;"><a href="berita3.html" style="text-decoration-color: #4070f4;"> Selanjutnya></a></h6>
-						</div>
-					</div>
-				</div>
-      </div>
+        <div class="row gx-5">
+            <div class="col-lg-4 col-md-6 footer-about">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4" >
+                  <img src="Asset/logounriputih.png" alt="" style="width: 60%; height:auto">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-6">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h4 class="text-light mb-0">Kontak</h4>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-geo-alt text-primary me-2"></i>
+                            <p class="mb-0">Gedung C lantai 2 Fakultas Teknik Universitas Riau Kampus Binawidya Jl. HR Soebrantas KM. 12,5 Simpang Baru, Binawidya.</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-envelope-open text-primary me-2"></i>
+                            <p class="mb-0">informatika@eng.unri.ac.id</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-telephone text-primary me-2"></i>
+                            <p class="mb-0">(+62761)66596</p>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-twitter fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h4 class="text-light mb-0">S1 Teknik Informatika</h4>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Berita</a>
+                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Event</a>
+                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Prestasi Mahasiswa</a>
+                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Tutorial</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h4 class="text-light mb-0">Link Terkait</h4>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Beasiswa</a>
+                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Konferensi</a>
+                            <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Tracer Study</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+</div>
 
-  <section class="panel" style="padding: 10px;">
-    <div class="d-grid gap-2" style="justify-content: center;">
-      <button class="btn btn-primary" type="button" >Selengkapnya</button>
+<!-- Copyright -->
+<div class="container-fluid text-white" style="background: #061429;">
+    <div class="container text-center">
+        <div class="row justify-content-end">
+            <div class="col-lg-8 col-md-6">
+                <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
+                    <p class="mb-0">&copy; Copyright All Rights Reserved 2023</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </section><!-- panel  -->
+</div>
+<!-- Copyright -->
+<!-- End Footer -->
 
-  <section>
-    <div class="d-flex">
-          <h4 class="title-content" style="width: 70 px;">Kegiatan</h4>
-        
-        <hr color="#7ac943" width="82%" style="margin-left: 2px; height: 4px; opacity: 100%; border: none;">
-        <!-- <div class="garis-berita" style="font-size: 20px;"> -->
-        </div>
-      </div>
-  </section>
-
-  <section class="kegiatan">
-    <div class="container">
-      <div class="slide-container swiper">
-      <div class="slide-content">
-          <div class="card-wrapper swiper-wrapper">
-              <div class="card swiper-slide">
-                  <div class="image-content">
-                      <span class="overlay"></span>
-
-                      <div class="card-image">
-                          <img src="Asset/HOWTOCREAT.jpg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">[EVENT] WEBINAR : How to Create a Project/Research Poster</h2>
-                      <p class="description"><br> BY DIAN RAMADHANI </p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide">
-                  <div class="image-content">
-                      <span class="overlay"></span>
-
-                      <div class="card-image">
-                          <img src="Asset/data-analytics.jpg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">[EVENT] KULIAH UMUM : Data Analytics for Health Sector</h2>
-                      <p class="description"><br> BY SALHAZAN NASUTION </p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide">
-                  <div class="image-content">
-                      <span class="overlay"></span>
-
-                      <div class="card-image">
-                          <img src="Asset/FGADTS22.jpg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">[EVENT] Orientasi Program FGA DTS 2022</h2>
-                      <p class="description"><br> BY DIAN RAMADHANI </p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide">
-                  <div class="image-content">
-                      <span class="overlay"></span>
-
-                      <div class="card-image">
-                          <img src="Asset/Kuliah-Umum-Data-Abalytics.jpg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">[EVENT] KULIAH UMUM : Big Data Analytics and Visualization</h2>
-                      <p class="description">BY DIAN RAMADHANI</p>
-
-                      <button href="#" class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide">
-                  <div class="image-content">
-                      <span class="overlay"></span>
-
-                      <div class="card-image">
-                          <img src="Asset/FGADTS21.jpg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">[EVENT] Orientasi Program FGA DTS 2021</h2>
-                      <p class="description">BY DIAN RAMADHANI</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-              <div class="card swiper-slide">
-                  <div class="image-content">
-                      <span class="overlay"></span>
-
-                      <div class="card-image">
-                          <img src="Asset/webinar-ti-COMPUTERVISION.jpg" alt="" class="card-img">
-                      </div>
-                  </div>
-
-                  <div class="card-content">
-                      <h2 class="name">[EVENT] KULIAH UMUM : Computer Vision dan Artificial Intelligence di Era Revolusi Industri 4.0</h2>
-                      <p class="description">BY SALHAZAN NASUTION</p>
-
-                      <button class="button">View More</button>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      <div class="swiper-button-next swiper-navBtn"></div>
-      <div class="swiper-button-prev swiper-navBtn"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-
-    </div>
-    <!-- <div class="container">
-      <div class="row row-cols-2 row-cols-md-4 g-4">
-        <div class="col">
-          <div class="card h-100" style="width: 256.5px;">
-            <img src="Asset/k1.jpg" class="card-img-thumbnail" style="border-radius: 0.3rem;">
-            <div class="card-body">
-              <h5 class="card-title"><a href="berita1.html" style="text-decoration: none; color: black;">Ani Mardatillah, mahasiswa Teknik Informatika Juara 1 Lomba MTQ Kecamatan</a></h5>
-              <p class="card-text">BY DIAN RAMADHANI</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" style="width: 256.5px;">
-            <img src="Asset/k2.jpg" class="card-img-thumbnail" style="border-radius: 0.3rem;">
-            <div class="card-body">
-              <h5 class="card-title"><a href="berita1.html" style="text-decoration: none; color: black;">[EVENT] Orientasi Program FGA DTS 2022</a></h5>
-              <p class="card-text"><br><br> BY DIAN RAMADHANI</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" style="width: 256.5px;">
-            <img src="Asset/k3.jpg" class="card-img-thumbnail" style="border-radius: 0.3rem;">
-            <div class="card-body">
-              <h5 class="card-title"><a href="berita1.html" style="text-decoration: none; color: black;">[EVENT] WEBINAR : How to Create a Project/Research Poster</a></h5>
-              <p class="card-text"> <br> BY DIAN RAMADHANI</p>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" style="width: 256.5px;">
-            <img src="Asset/k4.jpg" class="card-img-thumbnail" style="border-radius: 0.3rem;">
-            <div class="card-body">
-              <h5 class="card-title"><a href="berita1.html" style="text-decoration: none; color: black;">[EVENT] KULIAH UMUM : Data Analytics for Health Sector</a></h5>
-              <p class="card-text"> <br> BY DIAN RAMADHANI</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-  </section>
-
-  <section style="padding: 0px;">
-    <h3 style="text-align: center; margin-top: 20px;">KEMITRAAN</h3>
-    <div class="kemitraan">
-      <div class="wrapper">
-        <i id="left" class="fa-solid fa-angle-left"></i>
-        <div class="slider">
-          <img src="Asset/kemitraan/logo-bps-1.jpg" alt="img" draggable="false">
-          <img src="Asset/kemitraan/logo-cisco.jpg" alt="img" draggable="false">
-          <img src="Asset/kemitraan/logo-esri-1.jpg" alt="img" draggable="false">
-          <img src="Asset/kemitraan/logo-kemenkominfo.jpg" alt="img" draggable="false">
-          <img src="Asset/kemitraan/logo-microsoft.jpg" alt="img" draggable="false">
-          <img src="Asset/kemitraan/logo-mikrotik.jpg" alt="img" draggable="false">
-          <img src="Asset/kemitraan/logo-oracle.jpg" alt="img" draggable="false">
-          <img src="Asset/kemitraan/logo-redhat-1.jpg" alt="img" draggable="false">
-        </div>
-        <i id="right" class="fa-solid fa-angle-right"></i>
-      </div>
-    </div>
-  </section>
-
-  <div class="footer">
-    <footer>
-    <div class="container text-left text-md-left text-light pt-5 pb-4">
-    <div class="row text-center text-md-left">
-      <div class="row d-flex justify-content-center">
-        <div>
-          <h4 class="akreditasi">AKREDITASI BAN PT-<strong>B</strong></h4>
-          <!-- <hr class="d-flex" color="#ffffff" width="28%" style="height: 4px; opacity: 100%; top: 10px; margin-left: 36.1%;"> -->
-          <hr class="mb-4" style="opacity: 100%; margin-bottom: 10px; color: #ffffff">
-        </div>
-      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-        <div class="container-fluid">
-          <img src="Asset/logounriputih.png" alt="" style="width: 180px; padding-bottom: 15px; text-align: justify">
-          <p style="text-align: center">
-            <a href="https://instagram.com/syahirahtr_m?igshid=YmMyMTA2M2Y=" target="" class="medsos-icon" title="whatsapp"><i class="fa-brands fa-square-whatsapp fa-2x" style="color: #ffffff;"></i></a>
-            <a href="" target="" class="medsos-icon" title="facebook"><i class="fa-brands fa-square-facebook fa-2x" style="color: #ffffff;"></i></a>
-            <a href="" target="_blank" class="medsos-icon" title="linkedin"><i class="fa-brands fa-linkedin fa-2x" style="color: #ffffff;"></i></a>
-            <a href="" target="_blank" class="medsos-icon" title="instagram"><i class="fa-brands fa-square-instagram fa-2x" style="color: #ffffff;"></i></a>
-          </p>
-        </div>
-      </div>
-
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <p class="text-uppercase mb-0 font-weight-bold text-light" style="font-size: 14px; text-align: left;">S1
-                Teknik Informatika</p>
-              <hr color="#ffffff" class="mb-4" style="height: 4px; opacity: 100%; top: 10px;">
-              <p style="text-align: left">
-                <a href="#" class="text-light" style="text-decoration: none;">- Event</a>
-                <hr class="mb-4" style="opacity: 100%; color: #ffffff">
-              </p>
-              <p style="text-align: left">
-                <a href="#" class="text-light" style="text-decoration: none;">- Prestasi Mahasiswa</a>
-                <hr class="mb-4" style="opacity: 100%; color: #ffffff">
-              </p>
-              <p style="text-align: left">
-                <a href="#" class="text-light" style="text-decoration: none;">- Berita</a>
-                <hr class="mb-4" style="opacity: 100%; color: #ffffff">
-              </p>
-              <p style="text-align: left">
-                <a href="#" class="text-light" style="text-decoration: none;">- Tutorial</a>
-                <hr class="mb-4" style="opacity: 100%; color: #ffffff">
-              </p>
-            </div>
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <p class="text-uppercase mb-0 font-weight-bold text-light" style="font-size: 14px; text-align: left;">
-                KONTAK</p>
-              <hr color="#ffffff" class="mb-4" style="height: 4px; opacity: 100%; top: 10px;">
-              <p style="font-size: 16px; text-align: justify">Gedung C lantai 2 Fakultas Teknik, Universitas Riau Kampus
-                Binawidya Jl.HR Soebrantas KM.12.5, Simpang Baru, Binawidya, Pekanbaru-28293, E-email:informatika@eng.
-                <br>unri.ac.id
-              </p>
-
-            </div>
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <p class="text-uppercase mb-0 font-weight-bold text-light" style="font-size: 14px; text-align: left">LINK
-                TERKAIT</p>
-              <hr color="#ffffff" class="mb-4" style="height: 4px; opacity: 100%; top: 10px;">
-              <p style="text-align: left">
-                <a href="#" class="text-light" style="text-decoration: none;">- Beasiswa</a>
-                <hr class="mb-4" style="opacity: 100%; color: #ffffff">
-              </p>
-              <p style="text-align: left">
-                <a href="#" class="text-light" style="text-decoration: none;">- Konferensi </a>
-                <hr class="mb-4" style="opacity: 100%; color: #ffffff">
-              </p>
-              <p style="text-align: left">
-                <a href="#" class="text-light" style="text-decoration: none;">- Tracer Study</a>
-                <hr class="mb-4" style="opacity: 100%; color: #ffffff">
-              </p>
-            </div>
-          </div>
-    </footer>
-
-    <footer>
-      <div style="background-color: #000033; text-align: center; height: 40px; color: white;">
-        <p>
-          Copyright All Right Reserved 2023
-        </p>
-      </div>
-    </footer>
-  </div>
-
-
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script> -->
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/counterup2/2.0.2/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 
   <script>
-    var swiper = new Swiper(".slide-content", {
-      slidesPerView: 3,
-      spaceBetween: 25,
-      loop: true,
-      centerSlide: 'true',
-      fade: 'true',
-      grabCursor: 'true',
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-
-      breakpoints: {
-        0: {
-          slidesPerView: 1,
-        },
-        520: {
-          slidesPerView: 2,
-        },
-        950: {
-          slidesPerView: 3,
-        },
-      },
+    // Spinner
+    var spinner = function () {
+        setTimeout(function () {
+            if ($('#spinner').length > 0) {
+                $('#spinner').removeClass('show');
+            }
+        }, 1);
+    };
+    spinner();
+    
+  // Back to top button
+  $(window).scroll(function () {
+        if ($(this).scrollTop() >= 200) {
+            $('.back-to-top').fadeIn('slow');
+        } else {
+            $('.back-to-top').fadeOut('slow');
+        }
     });
+    $('.back-to-top').click(function () {
+        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
+        return true;
+    });
+
+  // Initiate the wowjs
+  new WOW().init();
+
+  // Sticky Navbar
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 45) {
+            $('.navbar').addClass('sticky-top shadow-sm');
+        } else {
+            $('.navbar').removeClass('sticky-top shadow-sm');
+        }
+    });
+    
+    // Dropdown di mouse hover
+    const $dropdown = $(".dropdown");
+    const $dropdownToggle = $(".dropdown-toggle");
+    const $dropdownMenu = $(".dropdown-menu");
+    const showClass = "show";
+    
+    $(window).on("load resize", function() {
+        if (this.matchMedia("(min-width: 992px)").matches) {
+            $dropdown.hover(
+            function() {
+                const $this = $(this);
+                $this.addClass(showClass);
+                $this.find($dropdownToggle).attr("aria-expanded", "true");
+                $this.find($dropdownMenu).addClass(showClass);
+            },
+            function() {
+                const $this = $(this);
+                $this.removeClass(showClass);
+                $this.find($dropdownToggle).attr("aria-expanded", "false");
+                $this.find($dropdownMenu).removeClass(showClass);
+            }
+            );
+        } else {
+            $dropdown.off("mouseenter mouseleave");
+        }
+    });
+  </script>
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
+  </script>
+
+  <script>
+
+  jQuery( document ).ready( function() {
+	
+    jQuery(function ($) {
+        "use strict";
+      
+        var counterUp = window.counterUp["default"]; // import counterUp from "counterup2"
+      
+        var $counters = $(".counter");
+      
+        /* Start counting, do this on DOM ready or with Waypoints. */
+      $counters.each(function (ignore, counter) {
+        var waypoint = new Waypoint( {
+          element: $(this),
+          handler: function() { 
+            counterUp(counter, {
+              duration: 5000,
+              delay: 16
+            }); 
+            this.destroy();
+          },
+          offset: 'bottom-in-view',
+        } );
+      });
+
+    });
+  });
   </script>
 </body>
 
