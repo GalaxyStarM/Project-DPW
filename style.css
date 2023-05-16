@@ -342,12 +342,12 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover,
+/* a:hover,
 a:focus,
 a:visited:hover {
   color: #c42245;
   text-decoration: none;
-}
+} */
 
 nav {
     display: block;
@@ -381,7 +381,7 @@ nav {
 
 .menu li a:hover,.menu li:hover>a {
     color: #e3e3e3;
-    background: #ff3c41;
+    background: #06A3DA;
 }
 
 .menu ul {
@@ -430,7 +430,7 @@ nav {
 }
 
 .menu ul li a:hover,.menu ul li:hover>a {
-    background: #ff3c41;
+    background: #06A3DA;
     color: #e3e3e3;
 }
 
@@ -542,7 +542,7 @@ nav {
     }
 
     .menu li a:hover,.menu li:hover>a {
-        background: #ff3c41;
+        background: #06A3DA;
         color: #e3e3e3;
     }
 

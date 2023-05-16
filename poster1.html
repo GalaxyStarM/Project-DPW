@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+</head>
+<body>
+  <style>
+
+    li{
+      text-align: -webkit-match-parent;
+      display: list-item;
+    }
+    .post-list, .event-list, .widget #recentcomments, .widget.widget_rss ul{
+      padding: 0 !important;
+      margin-bottom: 0;
+      list-style: none;
+    }
+    ul{
+      list-style-type: disc;
+    }
+    @media (max-width:767px) {
+      .single-post h4{
+        font-size: 14px;
+      }
+    }
+    a:hover, a:focus{
+      color: #0d667b;
+      text-decoration: none;
+    }
+    ul li{
+      list-style: none;
+    }
+    @media (max-width:767px) {
+      .widget ul li {
+        margin-bottom: 10px;
+      }
+    }
+    .widget ul li {
+        margin-bottom: 15px;
+      }
+    .post-list > li, .event-list > li, .widget #recentcomments > li, .widget.widget_rss ul > li{
+      padding-bottom: 15px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #E6E6E6;
+    }
+    .widget ul{
+      list-style: none;
+      padding: 0 !important;
+      margin-bottom: 0 !important;
+    }
+    .event-list{
+      font-family: circular std;
+    }
+    .post-list, .event-list, .widget #recentcomments, .widget.widget_rss{
+      padding: 0 !important;
+      margin-bottom: 0;
+      list-style: none;
+    }
+    ul{
+      list-style-type: disc;
+    }
+    #directory #content .sidebar .sidebar-menu .list-menu:after, #directory .sidebar .sidebar-menu #content .list-menu:after, #directory .alphabet section:after, .post-list > li:after, .event-list > li:after, .widget #recentcomments > li:after, .widget.widget_rss ul > li:after, .widget:after, #comments .entry-comments .comment .comment-author:after {
+    content: " ";
+    display: table; }
+
+    *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    .event-list a .event-date, .event-list a .event-titlt{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .event-list .event-date{
+      font-size: 48px;
+      color: #a6a6a6;
+      text-align: center;
+      width: 72px !important;
+      line-height: 1.2;
+    }
+    .panel-box ul a, .post-list a, .widget ul li a, .widget.widget_rss ul li a{
+      font-family: "Circular Std";
+      font-weight: normal;
+      color: #000033;
+      text-decoration-line: none;
+      text-decoration-thickness :initial;
+      text-decoration-style: initial;
+      text-decoration-color: initial;
+      font-size: 14px;
+      display: block;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+    .event-list a{
+      display: table;
+      width: 100%;
+      text-decoration-line: none;
+      text-decoration-thickness :initial;
+      text-decoration-style: initial;
+      text-decoration-color: initial;
+      color: #222222;
+      line-height: 1.42;
+    }
+    a:-webkit-any-link{
+      color: -webkit-link;
+      cursor: pointer;
+    }
+    .widget.widget.widget_rss ul li .rssSummary{
+      display: none;
+    }
+    div{
+      display: block;
+    }
+    .widget.widget_rss ul li cite{
+      font-style: normal;
+    }
+    .post-list .meta-date, .widget.widget_rss ul li .rss-date, .widget .widget.widget_rss ul li cite{
+      font-family: "Proxima Nova";
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #a6a6a6;
+      display: line-block;
+      margin-right: 6px;
+    }
+    cite{
+      font-style: italic;
+    }
+    .widget.widget_rss ul li cite::before{
+      content: 'by';
+      color: #a6a6a6;
+      display: inline-block;
+      margin-right: 3px;
+    }
+    .content .content-header,
+    #content .content-header, .tpb-title, .single-post .content-heading, .panel-header, .widget .widget-header, #comments .comment-header {
+    border-bottom: 1px solid #E6E6E6;
+    margin-bottom: 30px; }
+    .content .content-header > span, #content .content-header > span, .tpb-title > span, .single-post .content-heading > span, .panel-header > span, .widget .widget-header > span, #comments .comment-header > span {
+      font-family: "Proxima Nova";
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #555555;
+      display: block; }
+    .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2, .content .content-header h3, #content .content-header h3, .tpb-title h3, .single-post .content-heading h3, .panel-header h3, .widget .widget-header h3, #comments .comment-header h3, .content .content-header h4, #content .content-header h4, .tpb-title h4, .single-post .content-heading h4, .panel-header h4, .widget .widget-header h4, #comments .comment-header h4,
+    .content .content-header > .widget-title,
+    #content .content-header > .widget-title,
+    .tpb-title > .widget-title,
+    .single-post .content-heading > .widget-title,
+    .panel-header > .widget-title,
+    .widget .widget-header > .widget-title,
+    #comments .comment-header > .widget-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #073C64;
+      margin-top: 0;
+      margin-bottom: -1px !important;
+      border-bottom: 3px solid #06A3DA;
+      padding-bottom: 11px;
+      display: inline-block; }
+      .content .content-header > h2 > a, #content .content-header > h2 > a, .tpb-title > h2 > a, .single-post .content-heading > h2 > a, .panel-header > h2 > a, .widget .widget-header > h2 > a, #comments .comment-header > h2 > a, .content .content-header h3 > a, #content .content-header h3 > a, .tpb-title h3 > a, .single-post .content-heading h3 > a, .panel-header h3 > a, .widget .widget-header h3 > a, #comments .comment-header h3 > a, .content .content-header h4 > a, #content .content-header h4 > a, .tpb-title h4 > a, .single-post .content-heading h4 > a, .panel-header h4 > a, .widget .widget-header h4 > a, #comments .comment-header h4 > a,
+      .content .content-header > .widget-title > a,
+      #content .content-header > .widget-title > a,
+      .tpb-title > .widget-title > a,
+      .single-post .content-heading > .widget-title > a,
+      .panel-header > .widget-title > a,
+      .widget .widget-header > .widget-title > a,
+      #comments .comment-header > .widget-title > a {
+        text-decoration: none;
+        color: inherit; }
+    @media (min-width: 768px) {
+      .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2, .content .content-header h3, #content .content-header h3, .tpb-title h3, .single-post .content-heading h3, .panel-header h3, .widget .widget-header h3, #comments .comment-header h3, .content .content-header h4, #content .content-header h4, .tpb-title h4, .single-post .content-heading h4, .panel-header h4, .widget .widget-header h4, #comments .comment-header h4,
+      .content .content-header > .widget-title,
+      #content .content-header > .widget-title,
+      .tpb-title > .widget-title,
+      .single-post .content-heading > .widget-title,
+      .panel-header > .widget-title,
+      .widget .widget-header > .widget-title,
+      #comments .comment-header > .widget-title {
+        font-size: 22px !important; }
+      .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2 {
+      font-size: 24px !important; } }
+      @media (max-width: 767px) {
+      .content .content-header,
+      #content .content-header, .tpb-title, .single-post .content-heading, .panel-header, .widget .widget-header, #comments .comment-header {
+        margin-bottom: 15px; }
+        .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2 {
+          font-size: 22px !important; } }
+    
+      /* Default widget style*/
+  .widget {
+    margin-bottom: 40px;
+    /* Header widget & Section*/
+    /* Widget calendar*/
+    /* Widget Archive*/
+    /* Widget rss*/ }
+    .widget p {
+      font-family: "Circular Std"; }
+    .widget ul {
+      list-style: none;
+      padding: 0 !important;
+      margin-bottom: 0 !important; }
+    .widget ul li {
+      margin-bottom: 15px; }
+      .widget ul li:last-child {
+        margin-bottom: 0; }
+    @media (max-width: 767px) {
+      .widget ul li {
+        margin-bottom: 10px; } }
+  .widget .btn-box {
+    margin-top: 20px; }
+  
+    .widget #wp-calendar {
+    width: 100%; }
+    .widget #wp-calendar caption, .widget #wp-calendar th, .widget #wp-calendar td {
+      text-align: center;
+      padding: 5px !important;
+      border: none !important;
+      background-color: transparent !important; }
+    .widget #wp-calendar caption {
+      color: #222222;
+      font-family: "Proxima Nova";
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 10px 5px; }
+    .widget #wp-calendar a {
+      text-decoration: none;
+      text-transform: uppercase; }
+    .widget #wp-calendar tbody td a {
+      position: relative;
+      display: block;
+      margin: auto;
+      width: 24px;
+      height: 24px;
+      color: #fff;
+      z-index: 1; }
+    .widget #wp-calendar tbody td a:before {
+        content: "";
+        position: absolute;
+        left: -3px;
+        top: -3px;
+        right: -3px;
+        bottom: -3px;
+        background-color: #073C64;
+        z-index: -1;
+        border-radius: 999px; }
+    .widget #wp-calendar th {
+      font-family: "Proxima Nova";
+      font-size: 10px;
+      color: #a6a6a6; }
+    .widget #wp-calendar #prev a,
+    .widget #wp-calendar #next a {
+      color: #149fc0;
+      font-family: "Proxima Nova";
+      font-size: 12px; }
+    .widget #wp-calendar #prev a:hover,
+    .widget #wp-calendar #next a:hover {
+        color: #0d667b; }
+    .widget .textwidget > p:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 768px) and (max-width: 1024px) {
+    .widget .textwidget .wp-caption {
+      max-width: 300px;
+      float: left;
+      margin-right: 15px; } }
+    .widget.widget-categories > ul > li > a,
+    .widget.widget_archive > ul > li > a {
+    display: inline-block; }
+    .widget.widget_rss ul li cite {
+    font-style: normal; }
+    .widget.widget_rss ul li cite:before {
+      content: 'by';
+      color: #a6a6a6;
+      display: inline-block;
+      margin-right: 3px; }
+    .widget.widget_rss ul li .rssSummary {
+    display: none; }
+
+    @media (max-width: 1023px) {
+    widget {
+      margin-bottom: 30px; }
+    .widget-header {
+      margin-bottom: 15px; } }
+    
+    /* Widget Event List*/
+    .event-list {
+      font-family: "Circular Std"; }
+    .event-list a {
+      display: table;
+      width: 100%;
+      text-decoration: none;
+      color: #222222;
+      line-height: 1.42; }
+    .event-list a:hover .event-title {
+      color: #149fc0; }
+    .event-list a .event-date, .event-list a .event-title {
+      display: table-cell;
+      vertical-align: middle; }
+    .event-list .event-date {
+    font-size: 48px;
+    color: #a6a6a6;
+    text-align: center;
+    width: 72px !important;
+    line-height: 1.2; }
+    .event-list .event-date strong {
+      display: block;
+      font-size: 12px;
+      color: #555555;
+      font-family: "Proxima Nova";
+      font-weight: bold;
+      text-transform: uppercase; }
+    .event-list .event-title {
+    padding-left: 15px;
+    border-left: 1px solid #E6E6E6; }
+    .event-list li:hover .event-date {
+    color: #222222; }
+
+    .single-post .post-heading .entry-meta {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0; 
+      }
+      .post-list .meta-date, .widget.widget_rss ul li .rss-date, .widget.widget_rss ul li cite {
+      font-family: "Proxima Nova";
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #a6a6a6;
+      display: inline-block;
+      margin-right: 6px;
+      }
+      
+        .single-post .post-heading .entry-meta li.post-date:before {
+          content: "<ion-icon name="time-outline"></ion-icon>";
+          content: "<ion-icon name="person-outline"></ion-icon>";
+        }
+        @media (min-width: 767.98px) {
+          .post-date {
+              font-size:smaller;
+          }
+      }
+      .single-post .post-heading .entry-meta li {
+        display: inline-block;
+        margin-right: 15px;
+        line-height: 30px; }
+      
+        .mb-5 a{
+        color:#000033;
+        font-size: 14px
+        ;
+      }
+      
+      .mb-5 a:hover{
+        color: #06A3DA;
+        font-size: 14px
+        ;
+      }
+      .bg-header {
+        background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-1.jpg) center center no-repeat;
+        background-size: cover;
+      }
+      
+    </style>
+
+  </div>
+  <div class="container-fluid bg-primary bg-header py-5 " style="margin-bottom: 0px;">
+    <div class="row py-5">
+        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
+            <h1 class="display-4 text-white animated zoomIn">Poster Mahasiswa</h1>
+        </div>
+    </div>
+</div>
+</header>
+
+    <div class="container pt-5">
+      <div class="row">
+        <div id="content" class="col-md-8 col-md-push-1 sidebar-right">
+          <article class="single-post">
+            <div class="post-heading">
+              <h1 class="post-title border-start border-5 border-primary ps-4 mb-5" style="text-align: left;">Poster Skripsi Mahasiswa - Bulan Mei 2023</h1>
+              <ul class="entry-meta" style="text-align: center;">
+                <ion-icon name="person-outline" style="color: #06A3DA;"></ion-icon>
+                <li class="post-author">Oleh : Dian Ramadhani</li>
+                <ion-icon name="time-outline" style="color: #06A3DA;"></ion-icon>
+                <li class="post-date">11 Apr 2023</li>
+              </ul>
+            </div>
+            <div class="post-content">
+              <figure class="entry-thumbail slider-wrapper">
+                <center><img src="Asset/poster-mahasiswa.jpg" alt="Poster Skripsi Mahasiswa - Bulan Mei 2023" class="img-responsive" style="max-width: 100%; display:block; height: auto;"></center>
+              </figure>
+              <p style="text-align: justify;">Setiap mahasiswa mempunya kewajiban mempublikasi hasil penelitian skripsi dalam bentuk poster. Berikut daftar poster hasil skripsi mahasiswa Program Studi Teknik Informatika, Jurusan Teknik Elektro, Fakultas Teknik, Universitas Riau.</p>
+              <h2 style="text-align: justify;">
+                <ol>
+                    <li>
+                        JUDUL SKRIPSI : Perbandingan Manajemen Bandwidth Metode Hierarchical Token Bucket (HTB) Dan Peer Connection Queue (PCQ) Pada SDS IT Sahabat Muslim Duri
+                        <img src="Asset/Poster-Skripsi-1.jpg" alt="" class="img-responsive pt-3" style="max-width: 100%; display:block; height: auto; align-items: center; position: relative;">
+                    </li>
+                    <li class="pt-3">
+                        JUDUL SKRIPSI : Rancang Bangun Sistem Diagnosa Penyakit Paru-Paru Menggunakan Metode Metode Naive Bayes Berbasis Website
+                        <img src="Asset/Poster-Skripsi-2.jpg" alt="" class="img-responsive pt-3" style="max-width: 100%; display:block; height: auto;">
+                    </li>
+                    <li class="pt-3">
+                        JUDUL SKRIPSI :  Implementasi Deep Learning Untuk Identifikasi Daun Tanaman Obat Menggunakan Metode Transfer Learning
+                        <img src="Asset/Poster-Skripsi-3.jpg" alt=""class="img-responsive pt-3" style="max-width: 100%; display:block; height: auto;">
+                    </li>
+                    <li class="pt-3">
+                        Judul : Sistem Keamanan Sepeda Motor Menggunakan Teknik Pelacakan Berbasis Internet of Things (IoT) Dengan Komunikasi Long Range (LoRa)
+                        <img src="Asset/Poster-Skripsi-4.jpg" alt="" class="img-responsive pt-3" style="max-width: 100%; display:block; height: auto;">
+                    </li>
+                    <li class="pt-3">
+                        Judul : Analisis Kerentanan dan Keamanan Layanan Cloud Computing dari Serangan Denial of Service (DoS) dengan Menggunakan Metode Intusion Detection System (IDS).
+                        <img src="Asset/Poster-Skripsi-5.jpg" alt="" class="img-responsive pt-3" style="max-width: 100%; display:block; height: auto;">
+                    </li>
+                </ol>
+              </h2>
+              <!-- <p style="text-align: center">
+                <a href="" target="" class="medsos-icon" title="whatsapp"><i class="fa-brands fa-square-whatsapp fa-2x" style="color: #25D366;"></i></a>
+                <a href="" target="" class="medsos-icon" title="facebook"><i class="fa-brands fa-square-facebook fa-2x" style="color: #3b5998;"></i></a>
+                <a href="" target="_blank" class="medsos-icon" title="instagram"><i class="fa-brands fa-square-instagram fa-2x" style="color: #8134AF;"></i></a>
+              </p> -->
+            </div>
+          </article>
+          <hr class="mb-4">
+        </div>
+
+
+        <div id="sidebar" class="col-md-4">
+            <div class="widget widget-event pt-2">
+                <div class="widget-header">
+                    <h3 class="widget-title ">Poster Mahasiswa</h3>
+                </div>
+                <ul class="post-list pt-0">
+                  <li>
+                     <a href="poster2.html">
+                      <h6 style="color: #000033;">Poster Skripsi Mahasiswa - Bulan April 2023</h6>
+                     </a>
+                     <div class="entry-meta">
+                     <span class="meta-date">01 April 2023</span>
+                     </div>
+                  </li>
+                </ul>
+              </div>
+            <div class="widget widget-event pt-2">
+          <div class="widget widget_rss">
+            <div class="widget-header">
+              <h3 class="widget-title">
+                <a href="/id/berita/feed.xml" class="rsswidget"></a>
+                <a href="/id/post/viewrilisAll" class="rsswidget">Rilis Berita</a>
+              </h3>
+            </div>
+            <ul>
+              <li>
+                <a href="berita2.html" class="rsswidget" title="Prof Azriyenni Guru Besar Teknik Elektro Pertama di Riau" style="font-size: 18px;">Prof Azriyenni Guru Besar Teknik Elektro Pertama di Riau.</a>
+                <span class="rss-date">15 Jun 2022</span>
+                <div class="rssSummary">Prof Azriyenni Guru Besar Teknik Elektro Pertama di Riau</div>
+                <cite>Salhazan Nasution</cite>
+              </li>
+              <li>
+                <a href="berita3.html" class="rsswidget" title="Dr. Irsan Taufik Ali, ST., MT dosen Prodi Teknik Informatika meraih gelar Doktor di bidang Deep Learning." style="font-size: 18px;">Dr. Irsan Taufik Ali, ST., MT dosen Prodi Teknik Informatika meraih gelar Doktor di bidang Deep Learning.</a>
+                <span class="rss-date">12 July 2022</span>
+                <div class="rssSummary">Dr. Irsan Taufik Ali, ST., MT meraih gelar Doktor di bidang Artificial Intelligence khususnya Deep Learning. </div>
+                <cite>Salhazan Nasution</cite>
+              </li>
+              <li>
+                <a href="berita4.html" class="rsswidget" title="Dr. Azriyenni, ST., M.Eng Wakil Dekan bidang Kemahasiswaan, Kerjasama dan Alumni Fakultas Teknik" style="font-size: 18px;">Dr. Azriyenni, ST., M.Eng Wakil Dekan bidang Kemahasiswaan, Kerjasama dan Alumni Fakultas Teknik</a>
+                <span class="rss-date">15 June 2022</span>
+                <div class="rssSummary">Dr. Azriyenni, ST., M.Eng Wakil Dekan bidang Kemahasiswaan, Kerjasama dan Alumni Fakultas Teknik</div>
+                <cite>Salhazan Nasution</cite>
+              </li>
+              <li>
+                <a href="berita5.html" class="rsswidget" title="Jadwal Seminar KP" style="font-size: 18px;">Jadwal Seminar KP (Pekan ke-1 bulan Juni 2021)</a>
+                <span class="rss-date">21 May 2021</span>
+                <div class="rssSummary">Jadwal Seminar KP</div>
+                <cite>Salhazan Nasution</cite>
+              </li>
+              <li>
+                <a href="berita6.html" class="rsswidget" title="Jadwal Seminar KP" style="font-size: 18px;">Jadwal Seminar KP (Pekan ke-1 bulan Juni 2021)</a>
+                <span class="rss-date">02 June 2021</span>
+                <div class="rssSummary">Jadwal Seminar KP</div>
+                <cite>Salhazan Nasution</cite>
+              </li>
+            </ul>      
+          </div>
+
+          <!-- Recent Post Start -->
+          <!-- <div class="mb-5">
+            <h2 class="mb-4">Recent Post</h2>
+            <div class="d-flex mb-3">
+                <img class="img-fluid" src="Asset/k1.jpg" style="width: 100px; height: 100px; object-fit: cover; " alt="">
+                <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">Ani Mardhatillah, mahasiswa Teknik Informatika Juara 1 Lomba MTQ Kecamatan
+                </a>
+            </div>
+            <div class="d-flex mb-3">
+                <img class="img-fluid" src="Asset/Profaz.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">Dr. Azriyenni, ST., M.Eng Wakil Dekan bidang Kemahasiswaan, Kerjasama dan Alumni Fakultas Teknik
+                </a>
+            </div>
+            <div class="d-flex mb-3">
+                <img class="img-fluid" src="Asset/pakirsan.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
+                </a>
+            </div>
+            <div class="d-flex mb-3">
+                <img class="img-fluid" src="img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0" style="font-size: 14px; ">Lorem ipsum dolor sit amet adipis elit
+                </a>
+            </div>
+            <div class="d-flex">
+                <img class="img-fluid" src="img/blog-1.jpg" style="width: 100px; height: 100px; object-fit: cover;" alt="">
+                <a href="" class="h5 d-flex align-items-center bg-light px-3 mb-0">Lorem ipsum dolor sit amet adipis elit
+                </a>
+            </div>
+        </div> -->
+        <!-- Recent Post End -->
+
+          <div class="widget widget-event pt-4">
+            <div class="widget-header">
+                <h3 class="widget-title ">Kegiatan</h3>
+            </div>
+            <ul class="event-list">
+              <li>
+                <a href="kegiatan1.html">
+                    <span class="event-date">13<strong>JUL</strong></span>
+                    <span class="event-title">[EVENT] Orientasi Program FGA DTS 2022</span>
+                </a>
+              </li>
+              <li>
+                <a href="kegiatan2.html">
+                    <span class="event-date">17<strong>JUN</strong></span>
+                    <span class="event-title">[EVENT] KULIAH UMUM : Data Analytics for Health Sector</span>
+                </a>
+              </li>
+              <li>
+                  <a href="kegiatan3.html">
+                      <span class="event-date">15<strong>JUN</strong></span>
+                      <span class="event-title">[EVENT] WEBINAR : How to Create a Project/Research Poster</span>
+                  </a>
+              </li>
+              <li>
+                <a href="kegiatan4.html">
+                    <span class="event-date">26<strong>OCT</strong></span>
+                    <span class="event-title">[EVENT] KULIAH UMUM : Computer Vision dan Artificial Intelligence di Era Revolusi Industri 4.0</span>
+                </a>
+              </li>
+              <li>
+                <a href="kegiatan5.html">
+                    <span class="event-date">19<strong>JUL</strong></span>
+                    <span class="event-title">[EVENT] Orientasi Program FGA DTS 2021</span>
+                </a>
+              </li>
+              <li>
+                  <a href="kegiatan6.html">
+                      <span class="event-date">19<strong>MAR</strong></span>
+                      <span class="event-title">[EVENT] KULIAH UMUM : Big Data Analytics and Visualization</span>
+                  </a>
+              </li>
+          </ul>
+          </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+   
+  </body>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</html>
