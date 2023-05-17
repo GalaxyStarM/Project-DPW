@@ -34,6 +34,359 @@
   ul{list-style: none;}
   li{list-style: none;}
 </style>
+<style>
+  li{
+    text-align: -webkit-match-parent;
+    display: list-item;
+  }
+  .post-list, .event-list, .widget #recentcomments, .widget.widget_rss ul{
+    padding: 0 !important;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  ul{
+    list-style-type: disc;
+  }
+  @media (max-width:767px) {
+    .single-post h4{
+      font-size: 14px;
+    }
+  }
+  a:hover, a:focus{
+    color: #0d667b;
+    text-decoration: none;
+  }
+  ul li{
+    list-style: none;
+  }
+  @media (max-width:767px) {
+    .widget ul li {
+      margin-bottom: 10px;
+    }
+  }
+  .widget ul li {
+      margin-bottom: 15px;
+    }
+  .post-list > li, .event-list > li, .widget #recentcomments > li, .widget.widget_rss ul > li{
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  .widget ul{
+    list-style: none;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .event-list{
+    font-family: circular std;
+  }
+  .post-list, .event-list, .widget #recentcomments, .widget.widget_rss{
+    padding: 0 !important;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  ul{
+    list-style-type: disc;
+  }
+  #directory #content .sidebar .sidebar-menu .list-menu:after, #directory .sidebar .sidebar-menu #content .list-menu:after, #directory .alphabet section:after, .post-list > li:after, .event-list > li:after, .widget #recentcomments > li:after, .widget.widget_rss ul > li:after, .widget:after, #comments .entry-comments .comment .comment-author:after {
+  content: " ";
+  display: table; }
+
+  *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  }
+  .event-list a .event-date, .event-list a .event-titlt{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .event-list .event-date{
+    font-size: 48px;
+    color: #a6a6a6;
+    text-align: center;
+    width: 72px !important;
+    line-height: 1.2;
+  }
+  .panel-box ul a, .post-list a, .widget ul li a, .widget.widget_rss ul li a{
+    font-family: "Circular Std";
+    font-weight: normal;
+    color: #000033;
+    text-decoration-line: none;
+    text-decoration-thickness :initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    font-size: 14px;
+    display: block;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  .event-list a{
+    display: table;
+    width: 100%;
+    text-decoration-line: none;
+    text-decoration-thickness :initial;
+    text-decoration-style: initial;
+    text-decoration-color: initial;
+    color: #222222;
+    line-height: 1.42;
+  }
+  a:-webkit-any-link{
+    color: -webkit-link;
+    cursor: pointer;
+  }
+  .widget.widget.widget_rss ul li .rssSummary{
+    display: none;
+  }
+  div{
+    display: block;
+  }
+  .widget.widget_rss ul li cite{
+    font-style: normal;
+  }
+  .post-list .meta-date, .widget.widget_rss ul li .rss-date, .widget .widget.widget_rss ul li cite{
+    font-family: "Proxima Nova";
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #a6a6a6;
+    display: line-block;
+    margin-right: 6px;
+  }
+  cite{
+    font-style: italic;
+  }
+  .widget.widget_rss ul li cite::before{
+    content: 'by';
+    color: #a6a6a6;
+    display: inline-block;
+    margin-right: 3px;
+  }
+  .content .content-header,
+  #content .content-header, .tpb-title, .single-post .content-heading, .panel-header, .widget .widget-header, #comments .comment-header {
+  border-bottom: 1px solid #E6E6E6;
+  margin-bottom: 30px; }
+  .content .content-header > span, #content .content-header > span, .tpb-title > span, .single-post .content-heading > span, .panel-header > span, .widget .widget-header > span, #comments .comment-header > span {
+    font-family: "Proxima Nova";
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #555555;
+    display: block; }
+  .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2, .content .content-header h3, #content .content-header h3, .tpb-title h3, .single-post .content-heading h3, .panel-header h3, .widget .widget-header h3, #comments .comment-header h3, .content .content-header h4, #content .content-header h4, .tpb-title h4, .single-post .content-heading h4, .panel-header h4, .widget .widget-header h4, #comments .comment-header h4,
+  .content .content-header > .widget-title,
+  #content .content-header > .widget-title,
+  .tpb-title > .widget-title,
+  .single-post .content-heading > .widget-title,
+  .panel-header > .widget-title,
+  .widget .widget-header > .widget-title,
+  #comments .comment-header > .widget-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #073C64;
+    margin-top: 0;
+    margin-bottom: -1px !important;
+    border-bottom: 3px solid #06A3DA;
+    padding-bottom: 11px;
+    display: inline-block; }
+    .content .content-header > h2 > a, #content .content-header > h2 > a, .tpb-title > h2 > a, .single-post .content-heading > h2 > a, .panel-header > h2 > a, .widget .widget-header > h2 > a, #comments .comment-header > h2 > a, .content .content-header h3 > a, #content .content-header h3 > a, .tpb-title h3 > a, .single-post .content-heading h3 > a, .panel-header h3 > a, .widget .widget-header h3 > a, #comments .comment-header h3 > a, .content .content-header h4 > a, #content .content-header h4 > a, .tpb-title h4 > a, .single-post .content-heading h4 > a, .panel-header h4 > a, .widget .widget-header h4 > a, #comments .comment-header h4 > a,
+    .content .content-header > .widget-title > a,
+    #content .content-header > .widget-title > a,
+    .tpb-title > .widget-title > a,
+    .single-post .content-heading > .widget-title > a,
+    .panel-header > .widget-title > a,
+    .widget .widget-header > .widget-title > a,
+    #comments .comment-header > .widget-title > a {
+      text-decoration: none;
+      color: inherit; }
+  @media (min-width: 768px) {
+    .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2, .content .content-header h3, #content .content-header h3, .tpb-title h3, .single-post .content-heading h3, .panel-header h3, .widget .widget-header h3, #comments .comment-header h3, .content .content-header h4, #content .content-header h4, .tpb-title h4, .single-post .content-heading h4, .panel-header h4, .widget .widget-header h4, #comments .comment-header h4,
+    .content .content-header > .widget-title,
+    #content .content-header > .widget-title,
+    .tpb-title > .widget-title,
+    .single-post .content-heading > .widget-title,
+    .panel-header > .widget-title,
+    .widget .widget-header > .widget-title,
+    #comments .comment-header > .widget-title {
+      font-size: 22px !important; }
+    .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2 {
+    font-size: 24px !important; } }
+    @media (max-width: 767px) {
+    .content .content-header,
+    #content .content-header, .tpb-title, .single-post .content-heading, .panel-header, .widget .widget-header, #comments .comment-header {
+      margin-bottom: 15px; }
+      .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2 {
+        font-size: 22px !important; } }
+  
+    /* Default widget style*/
+.widget {
+  margin-bottom: 40px;
+  /* Header widget & Section*/
+  /* Widget calendar*/
+  /* Widget Archive*/
+  /* Widget rss*/ }
+  .widget p {
+    font-family: "Circular Std"; }
+  .widget ul {
+    list-style: none;
+    padding: 0 !important;
+    margin-bottom: 0 !important; }
+  .widget ul li {
+    margin-bottom: 15px; }
+    .widget ul li:last-child {
+      margin-bottom: 0; }
+  @media (max-width: 767px) {
+    .widget ul li {
+      margin-bottom: 10px; } }
+.widget .btn-box {
+  margin-top: 20px; }
+
+  .widget #wp-calendar {
+  width: 100%; }
+  .widget #wp-calendar caption, .widget #wp-calendar th, .widget #wp-calendar td {
+    text-align: center;
+    padding: 5px !important;
+    border: none !important;
+    background-color: transparent !important; }
+  .widget #wp-calendar caption {
+    color: #222222;
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 5px; }
+  .widget #wp-calendar a {
+    text-decoration: none;
+    text-transform: uppercase; }
+  .widget #wp-calendar tbody td a {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    color: #fff;
+    z-index: 1; }
+  .widget #wp-calendar tbody td a:before {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: -3px;
+      right: -3px;
+      bottom: -3px;
+      background-color: #073C64;
+      z-index: -1;
+      border-radius: 999px; }
+  .widget #wp-calendar th {
+    font-family: "Proxima Nova";
+    font-size: 10px;
+    color: #a6a6a6; }
+  .widget #wp-calendar #prev a,
+  .widget #wp-calendar #next a {
+    color: #149fc0;
+    font-family: "Proxima Nova";
+    font-size: 12px; }
+  .widget #wp-calendar #prev a:hover,
+  .widget #wp-calendar #next a:hover {
+      color: #0d667b; }
+  .widget .textwidget > p:last-child {
+    margin-bottom: 0; }
+  @media (min-width: 768px) and (max-width: 1024px) {
+  .widget .textwidget .wp-caption {
+    max-width: 300px;
+    float: left;
+    margin-right: 15px; } }
+  .widget.widget-categories > ul > li > a,
+  .widget.widget_archive > ul > li > a {
+  display: inline-block; }
+  .widget.widget_rss ul li cite {
+  font-style: normal; }
+  .widget.widget_rss ul li cite:before {
+    content: 'by';
+    color: #a6a6a6;
+    display: inline-block;
+    margin-right: 3px; }
+  .widget.widget_rss ul li .rssSummary {
+  display: none; }
+
+  @media (max-width: 1023px) {
+  widget {
+    margin-bottom: 30px; }
+  .widget-header {
+    margin-bottom: 15px; } }
+  
+  /* Widget Event List*/
+  .event-list {
+    font-family: "Circular Std"; }
+  .event-list a {
+    display: table;
+    width: 100%;
+    text-decoration: none;
+    color: #222222;
+    line-height: 1.42; }
+  .event-list a:hover .event-title {
+    color: #149fc0; }
+  .event-list a .event-date, .event-list a .event-title {
+    display: table-cell;
+    vertical-align: middle; }
+  .event-list .event-date {
+  font-size: 48px;
+  color: #a6a6a6;
+  text-align: center;
+  width: 72px !important;
+  line-height: 1.2; }
+  .event-list .event-date strong {
+    display: block;
+    font-size: 12px;
+    color: #555555;
+    font-family: "Proxima Nova";
+    font-weight: bold;
+    text-transform: uppercase; }
+  .event-list .event-title {
+  padding-left: 15px;
+  border-left: 1px solid #E6E6E6; }
+  .event-list li:hover .event-date {
+  color: #222222; }
+
+  .single-post .post-heading .entry-meta {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0; 
+    }
+    .post-list .meta-date, .widget.widget_rss ul li .rss-date, .widget.widget_rss ul li cite {
+    font-family: "Proxima Nova";
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #a6a6a6;
+    display: inline-block;
+    margin-right: 6px;
+    }
+    
+      .single-post .post-heading .entry-meta li.post-date:before {
+        content: "<ion-icon name="time-outline"></ion-icon>";
+        content: "<ion-icon name="person-outline"></ion-icon>";
+      }
+      @media (min-width: 767.98px) {
+        .post-date {
+            font-size:smaller;
+        }
+    }
+    .single-post .post-heading .entry-meta li {
+      display: inline-block;
+      margin-right: 15px;
+      line-height: 30px; }
+    
+      .mb-5 a{
+      color:#000033;
+      font-size: 14px
+      ;
+    }
+    
+    .mb-5 a:hover{
+      color: #06A3DA;
+      font-size: 14px
+      ;
+    }
+  </style>
 
 <body>
   <!-- Spinner Start -->
@@ -198,373 +551,18 @@
   </div>
 </div>
 <!-- Full Screen Search End -->
-  <style>
-    li{
-      text-align: -webkit-match-parent;
-      display: list-item;
-    }
-    .post-list, .event-list, .widget #recentcomments, .widget.widget_rss ul{
-      padding: 0 !important;
-      margin-bottom: 0;
-      list-style: none;
-    }
-    ul{
-      list-style-type: disc;
-    }
-    @media (max-width:767px) {
-      .single-post h4{
-        font-size: 14px;
-      }
-    }
-    a:hover, a:focus{
-      color: #0d667b;
-      text-decoration: none;
-    }
-    ul li{
-      list-style: none;
-    }
-    @media (max-width:767px) {
-      .widget ul li {
-        margin-bottom: 10px;
-      }
-    }
-    .widget ul li {
-        margin-bottom: 15px;
-      }
-    .post-list > li, .event-list > li, .widget #recentcomments > li, .widget.widget_rss ul > li{
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-      border-bottom: 1px solid #E6E6E6;
-    }
-    .widget ul{
-      list-style: none;
-      padding: 0 !important;
-      margin-bottom: 0 !important;
-    }
-    .event-list{
-      font-family: circular std;
-    }
-    .post-list, .event-list, .widget #recentcomments, .widget.widget_rss{
-      padding: 0 !important;
-      margin-bottom: 0;
-      list-style: none;
-    }
-    ul{
-      list-style-type: disc;
-    }
-    #directory #content .sidebar .sidebar-menu .list-menu:after, #directory .sidebar .sidebar-menu #content .list-menu:after, #directory .alphabet section:after, .post-list > li:after, .event-list > li:after, .widget #recentcomments > li:after, .widget.widget_rss ul > li:after, .widget:after, #comments .entry-comments .comment .comment-author:after {
-    content: " ";
-    display: table; }
 
-    *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    }
-    .event-list a .event-date, .event-list a .event-titlt{
-      display: table-cell;
-      vertical-align: middle;
-    }
-    .event-list .event-date{
-      font-size: 48px;
-      color: #a6a6a6;
-      text-align: center;
-      width: 72px !important;
-      line-height: 1.2;
-    }
-    .panel-box ul a, .post-list a, .widget ul li a, .widget.widget_rss ul li a{
-      font-family: "Circular Std";
-      font-weight: normal;
-      color: #000033;
-      text-decoration-line: none;
-      text-decoration-thickness :initial;
-      text-decoration-style: initial;
-      text-decoration-color: initial;
-      font-size: 14px;
-      display: block;
-      line-height: 1.4;
-      margin-bottom: 0;
-    }
-    .event-list a{
-      display: table;
-      width: 100%;
-      text-decoration-line: none;
-      text-decoration-thickness :initial;
-      text-decoration-style: initial;
-      text-decoration-color: initial;
-      color: #222222;
-      line-height: 1.42;
-    }
-    a:-webkit-any-link{
-      color: -webkit-link;
-      cursor: pointer;
-    }
-    .widget.widget.widget_rss ul li .rssSummary{
-      display: none;
-    }
-    div{
-      display: block;
-    }
-    .widget.widget_rss ul li cite{
-      font-style: normal;
-    }
-    .post-list .meta-date, .widget.widget_rss ul li .rss-date, .widget .widget.widget_rss ul li cite{
-      font-family: "Proxima Nova";
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #a6a6a6;
-      display: line-block;
-      margin-right: 6px;
-    }
-    cite{
-      font-style: italic;
-    }
-    .widget.widget_rss ul li cite::before{
-      content: 'by';
-      color: #a6a6a6;
-      display: inline-block;
-      margin-right: 3px;
-    }
-    .content .content-header,
-    #content .content-header, .tpb-title, .single-post .content-heading, .panel-header, .widget .widget-header, #comments .comment-header {
-    border-bottom: 1px solid #E6E6E6;
-    margin-bottom: 30px; }
-    .content .content-header > span, #content .content-header > span, .tpb-title > span, .single-post .content-heading > span, .panel-header > span, .widget .widget-header > span, #comments .comment-header > span {
-      font-family: "Proxima Nova";
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #555555;
-      display: block; }
-    .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2, .content .content-header h3, #content .content-header h3, .tpb-title h3, .single-post .content-heading h3, .panel-header h3, .widget .widget-header h3, #comments .comment-header h3, .content .content-header h4, #content .content-header h4, .tpb-title h4, .single-post .content-heading h4, .panel-header h4, .widget .widget-header h4, #comments .comment-header h4,
-    .content .content-header > .widget-title,
-    #content .content-header > .widget-title,
-    .tpb-title > .widget-title,
-    .single-post .content-heading > .widget-title,
-    .panel-header > .widget-title,
-    .widget .widget-header > .widget-title,
-    #comments .comment-header > .widget-title {
-      font-size: 18px;
-      font-weight: bold;
-      color: #073C64;
-      margin-top: 0;
-      margin-bottom: -1px !important;
-      border-bottom: 3px solid #06A3DA;
-      padding-bottom: 11px;
-      display: inline-block; }
-      .content .content-header > h2 > a, #content .content-header > h2 > a, .tpb-title > h2 > a, .single-post .content-heading > h2 > a, .panel-header > h2 > a, .widget .widget-header > h2 > a, #comments .comment-header > h2 > a, .content .content-header h3 > a, #content .content-header h3 > a, .tpb-title h3 > a, .single-post .content-heading h3 > a, .panel-header h3 > a, .widget .widget-header h3 > a, #comments .comment-header h3 > a, .content .content-header h4 > a, #content .content-header h4 > a, .tpb-title h4 > a, .single-post .content-heading h4 > a, .panel-header h4 > a, .widget .widget-header h4 > a, #comments .comment-header h4 > a,
-      .content .content-header > .widget-title > a,
-      #content .content-header > .widget-title > a,
-      .tpb-title > .widget-title > a,
-      .single-post .content-heading > .widget-title > a,
-      .panel-header > .widget-title > a,
-      .widget .widget-header > .widget-title > a,
-      #comments .comment-header > .widget-title > a {
-        text-decoration: none;
-        color: inherit; }
-    @media (min-width: 768px) {
-      .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2, .content .content-header h3, #content .content-header h3, .tpb-title h3, .single-post .content-heading h3, .panel-header h3, .widget .widget-header h3, #comments .comment-header h3, .content .content-header h4, #content .content-header h4, .tpb-title h4, .single-post .content-heading h4, .panel-header h4, .widget .widget-header h4, #comments .comment-header h4,
-      .content .content-header > .widget-title,
-      #content .content-header > .widget-title,
-      .tpb-title > .widget-title,
-      .single-post .content-heading > .widget-title,
-      .panel-header > .widget-title,
-      .widget .widget-header > .widget-title,
-      #comments .comment-header > .widget-title {
-        font-size: 22px !important; }
-      .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2 {
-      font-size: 24px !important; } }
-      @media (max-width: 767px) {
-      .content .content-header,
-      #content .content-header, .tpb-title, .single-post .content-heading, .panel-header, .widget .widget-header, #comments .comment-header {
-        margin-bottom: 15px; }
-        .content .content-header > h2, #content .content-header > h2, .tpb-title > h2, .single-post .content-heading > h2, .panel-header > h2, .widget .widget-header > h2, #comments .comment-header > h2 {
-          font-size: 22px !important; } }
-    
-      /* Default widget style*/
-  .widget {
-    margin-bottom: 40px;
-    /* Header widget & Section*/
-    /* Widget calendar*/
-    /* Widget Archive*/
-    /* Widget rss*/ }
-    .widget p {
-      font-family: "Circular Std"; }
-    .widget ul {
-      list-style: none;
-      padding: 0 !important;
-      margin-bottom: 0 !important; }
-    .widget ul li {
-      margin-bottom: 15px; }
-      .widget ul li:last-child {
-        margin-bottom: 0; }
-    @media (max-width: 767px) {
-      .widget ul li {
-        margin-bottom: 10px; } }
-  .widget .btn-box {
-    margin-top: 20px; }
-  
-    .widget #wp-calendar {
-    width: 100%; }
-    .widget #wp-calendar caption, .widget #wp-calendar th, .widget #wp-calendar td {
-      text-align: center;
-      padding: 5px !important;
-      border: none !important;
-      background-color: transparent !important; }
-    .widget #wp-calendar caption {
-      color: #222222;
-      font-family: "Proxima Nova";
-      font-weight: bold;
-      text-transform: uppercase;
-      padding: 10px 5px; }
-    .widget #wp-calendar a {
-      text-decoration: none;
-      text-transform: uppercase; }
-    .widget #wp-calendar tbody td a {
-      position: relative;
-      display: block;
-      margin: auto;
-      width: 24px;
-      height: 24px;
-      color: #fff;
-      z-index: 1; }
-    .widget #wp-calendar tbody td a:before {
-        content: "";
-        position: absolute;
-        left: -3px;
-        top: -3px;
-        right: -3px;
-        bottom: -3px;
-        background-color: #073C64;
-        z-index: -1;
-        border-radius: 999px; }
-    .widget #wp-calendar th {
-      font-family: "Proxima Nova";
-      font-size: 10px;
-      color: #a6a6a6; }
-    .widget #wp-calendar #prev a,
-    .widget #wp-calendar #next a {
-      color: #149fc0;
-      font-family: "Proxima Nova";
-      font-size: 12px; }
-    .widget #wp-calendar #prev a:hover,
-    .widget #wp-calendar #next a:hover {
-        color: #0d667b; }
-    .widget .textwidget > p:last-child {
-      margin-bottom: 0; }
-    @media (min-width: 768px) and (max-width: 1024px) {
-    .widget .textwidget .wp-caption {
-      max-width: 300px;
-      float: left;
-      margin-right: 15px; } }
-    .widget.widget-categories > ul > li > a,
-    .widget.widget_archive > ul > li > a {
-    display: inline-block; }
-    .widget.widget_rss ul li cite {
-    font-style: normal; }
-    .widget.widget_rss ul li cite:before {
-      content: 'by';
-      color: #a6a6a6;
-      display: inline-block;
-      margin-right: 3px; }
-    .widget.widget_rss ul li .rssSummary {
-    display: none; }
-
-    @media (max-width: 1023px) {
-    widget {
-      margin-bottom: 30px; }
-    .widget-header {
-      margin-bottom: 15px; } }
-    
-    /* Widget Event List*/
-    .event-list {
-      font-family: "Circular Std"; }
-    .event-list a {
-      display: table;
-      width: 100%;
-      text-decoration: none;
-      color: #222222;
-      line-height: 1.42; }
-    .event-list a:hover .event-title {
-      color: #149fc0; }
-    .event-list a .event-date, .event-list a .event-title {
-      display: table-cell;
-      vertical-align: middle; }
-    .event-list .event-date {
-    font-size: 48px;
-    color: #a6a6a6;
-    text-align: center;
-    width: 72px !important;
-    line-height: 1.2; }
-    .event-list .event-date strong {
-      display: block;
-      font-size: 12px;
-      color: #555555;
-      font-family: "Proxima Nova";
-      font-weight: bold;
-      text-transform: uppercase; }
-    .event-list .event-title {
-    padding-left: 15px;
-    border-left: 1px solid #E6E6E6; }
-    .event-list li:hover .event-date {
-    color: #222222; }
-
-    .single-post .post-heading .entry-meta {
-      list-style: none;
-      padding: 0;
-      margin-bottom: 0; 
-      }
-      .post-list .meta-date, .widget.widget_rss ul li .rss-date, .widget.widget_rss ul li cite {
-      font-family: "Proxima Nova";
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: bold;
-      color: #a6a6a6;
-      display: inline-block;
-      margin-right: 6px;
-      }
-      
-        .single-post .post-heading .entry-meta li.post-date:before {
-          content: "<ion-icon name="time-outline"></ion-icon>";
-          content: "<ion-icon name="person-outline"></ion-icon>";
-        }
-        @media (min-width: 767.98px) {
-          .post-date {
-              font-size:smaller;
-          }
-      }
-      .single-post .post-heading .entry-meta li {
-        display: inline-block;
-        margin-right: 15px;
-        line-height: 30px; }
-      
-        .mb-5 a{
-        color:#000033;
-        font-size: 14px
-        ;
-      }
-      
-      .mb-5 a:hover{
-        color: #06A3DA;
-        font-size: 14px
-        ;
-      }
-      .bg-header {
-        background: linear-gradient(rgba(9, 30, 62, .7), rgba(9, 30, 62, .7)), url(../img/carousel-1.jpg) center center no-repeat;
-        background-size: cover;
-      }
-      
-    </style>
-
-  </div>
+  <!-- Inner bg -->
   <div class="container-fluid bg-primary bg-header py-5 " style="margin-bottom: 0px;">
     <div class="row py-5">
         <div class="col-12 pt-lg-5 mt-lg-5 text-center">
             <h1 class="display-4 text-white animated zoomIn">Kegiatan</h1>
+            <a href="" class="h5 text-white">Home</a>
+            <i class="far fa-circle text-white px-2"></i>
+            <a href="" class="h5 text-white">Kegiatan</a>
         </div>
     </div>
-</div>
+  </div>
 </header>
 
     <div class="container pt-5">
