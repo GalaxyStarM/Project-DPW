@@ -138,6 +138,22 @@
     padding: 0;
     color: white;
   }
+  .blog-img {
+  position: relative;
+  overflow: hidden;
+  }
+
+  .blog-img img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+  }
+
+  .blog-img:hover img {
+  transform: scale(1.05);
+  }
+
+  
 
   </style>
 
@@ -401,7 +417,7 @@
   <!-- Facts Start -->
 
   <!-- teks -->
-  <div class="gtco-cover gtco-cover-sm" style="padding-top: 120px; margin-top: -10px; margin-bottom: 60px; background-image: url(img/blue-bg.jpg)" data-stellar-background-ratio="0.5">
+  <div class="gtco-cover gtco-cover-sm wow slideInUp" style="padding-top: 120px; margin-top: -20px; margin-bottom: 60px; background-image: url(img/blue-bg.jpg)" data-stellar-background-ratio="0.5" data-wow-delay="0.3s">
     <div class="overlay-home"></div>
     <div class="container">
       <div class="gtco-container text-center">
@@ -419,11 +435,11 @@
   <!-- teks end -->
 
   <!-- Berita Start -->
-  <section class="margin-top:50px">
+  <section class="margin-top:50px wow slideInUp" data-wow-delay="0.1s">
     <div class="Berita">
       <div class="container fadeInUp">
         <div class="section-title text-center position-relative pb-3 mb-5">
-          <h1>BERITA</h1>
+          <h2>BERITA</h2>
         </div>
         <!-- <div class="garis-berita" style="font-size: 20px;"> -->
       </div>
@@ -432,7 +448,7 @@
   <section class="acara section-padding">
     <div class="container">
       <div class="row">
-        <div class=" col-12 col-md-12 col-lg-4 pb-4 fadeInUp">
+        <div class=" col-12 col-md-12 col-lg-4 pb-4 wow slideInUp" ata-wow-delay="0.3s">
           <div class="shadow card text-light text-center bg-white pb-2" style="border-radius: 20px;">
             <div class="card-body text-dark ">
               <div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/Profaz2.jpg"
@@ -449,7 +465,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-12 col-lg-4 pb-4 fadeInUp">
+        <div class="col-12 col-md-12 col-lg-4 pb-4 wow slideInUp" ata-wow-delay="0.6s">
           <div class="shadow card text-light text-center bg-white pb-2" style="border-radius: 20px;">
             <div class="card-body text-dark ">
               <div class="img-area mb-4"><img alt="" class="img-fluid" src="Asset/pakirsan.jpg"
@@ -466,7 +482,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-12 col-lg-4 pb-4 slideInUp">
+        <div class="col-12 col-md-12 col-lg-4 pb-4 wow slideInUp" ata-wow-delay="0.9s">
           <div class="shadow card text-light text-center bg-white pb-2" style="border-radius: 20px;">
             <div class="card-body text-dark">
               <div class="img-area mb-4">
@@ -487,10 +503,10 @@
       </div>
     </div>
   </section>
-  <section style="position: relative; z-index: 50; margin-top: 30px;">
-    <div class="container">
-      <div class="d-grid gap-2" >
-        <a href="kategoriberita1.html" class="btn btn-primary btn-lg" target="_blank" type="button" style="color: floralwhite;">Selengkapnya</a>
+  <section style="position: relative; z-index: 50; margin-top: -30px;" class="wow slideInUp"d ata-wow-delay="0.3s">
+    <div class="container pt-5 text-center" style="position: relative; z-index: 50;">
+      <div class="d-grid gap-2" style="width: 500px; margin: 0 auto;">
+        <a href="kategoriberita1.html" class="shadow btn btn-light btn-lg" target="_blank" type="button" style="color: rgb(255, 255, 255); background-color:#517fb8">Lainnya <i class="bi bi-arrow-right"></i></a>
       </div>
     </div>
   </section>
@@ -500,65 +516,71 @@
   <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container py-5">
       <div class="section-title text-center position-relative pb-3 mb-5">
-        <h1 class="mb-0">KEGIATAN</h1>
+        <h2 class="mb-0">KEGIATAN</h2>
       </div>
       <div class="row g-5" style="position: relative; z-index: 50;">
         <div class="col-lg-4 col-12 wow slideInUp" data-wow-delay="0.3s">
-          <div class="blog-item bg-light rounded overflow-hidden">
+          <div class="shadow card blog-item overflow-hidden" style="background-color: rgba(251, 250, 249, 0.774); border-bottom-right-radius: 50px; border-top-left-radius: 50px;">
             <div class="blog-img position-relative overflow-hidden">
-              <img class="img-fluid" src="Asset/Kegiatan Baru/FGADTS22.jpg" alt="" style="width: 100%; height: 400px;">
+              <img class="img-fluid" src="Asset/Kegiatan Baru/FGADTS222.jpg" alt="" style="width: 100%; height: 100%; border-top-left-radius: 50px;">
             </div>
             <div class="p-4">
               <div class="d-flex mb-3">
                 <small class="me-3"><i class="far fa-user text-primary me-2"></i>Dian Ramadhani</small>
                 <small><i class="far fa-calendar-alt text-primary me-2"></i>13 Jul, 2022</small>
               </div>
-              <h4 class="mb-3">[EVENT] Orientasi Program FGA DTS 2022</h4>
-              <a class="text-uppercase" href="kegiatan1.html"> <br> Read More <i class="bi bi-arrow-right"></i></a>
+              <h5 class="mb-3">[EVENT] Orientasi Program FGA DTS 2022</h5>
+              <a class="text-uppercase" href="kegiatan1.html">Read More <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
+        
         <div class="col-lg-4 wow col-12 slideInUp" data-wow-delay="0.6s">
-          <div class="blog-item bg-light rounded overflow-hidden">
+          <div class="shadow card blog-item bg-light overflow-hidden" style="border-top-left-radius: 50px; border-bottom-right-radius: 50px;">
             <div class="blog-img position-relative overflow-hidden">
-              <img class="img-fluid" src="Asset/Kegiatan Baru/data-analytics.jpg" alt=""
-                style="width: 100%; height: 400px;">
+              <img class="img-fluid" src="Asset/Kegiatan Baru/data-analytics2.jpg" alt="" style="width: 100%; height: 100%; border-top-left-radius: 50px;">
             </div>
             <div class="p-4">
               <div class="d-flex mb-3">
                 <small class="me-3"><i class="far fa-user text-primary me-2"></i>Dian Ramadhani</small>
                 <small><i class="far fa-calendar-alt text-primary me-2"></i>17 Jun, 2022</small>
               </div>
-              <h4 class="mb-3" href="">[EVENT] KULIAH UMUM : Data Analytics for Health Sector</h4>
-              <a class="text-uppercase" href="kegiatan2.html"> Read More <i class="bi bi-arrow-right"></i></a>
+              <h5 class="mb-3" href="">[EVENT] KULIAH UMUM: Data Analytics for Health Sector</h5>
+              <a class="text-uppercase" href="kegiatan2.html">Read More <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
         </div>
+        
         <div class="col-lg-4 col-12 wow slideInUp" data-wow-delay="0.9s">
-          <div class="blog-item bg-light rounded overflow-hidden">
+          <div class="shadow card blog-item overflow-hidden" style="background-color: rgba(251, 250, 249, 0.774); border-bottom-right-radius: 50px; border-top-left-radius: 50px;">
             <div class="blog-img position-relative overflow-hidden">
-              <img class="img-fluid" src="Asset/Kegiatan Baru/HOWTOCREAT2.jpg" alt=""
-                style="width: 100%; height: 400px;">
+              <img class="img-fluid" src="Asset/Kegiatan Baru/HOWTOCREAT2.jpg" alt="" style="width: 100%; height: 100%; border-top-left-radius: 50px;">
             </div>
             <div class="p-4">
               <div class="d-flex mb-3">
                 <small class="me-3"><i class="far fa-user text-primary me-2"></i>Dian Ramadhani</small>
                 <small><i class="far fa-calendar-alt text-primary me-2"></i>15 Jun, 2022</small>
               </div>
-              <h4 class="mb-3">[EVENT] WEBINAR : How to Create a Project/Research Poster</h4>
+              <h5 class="mb-3">[EVENT] WEBINAR: How to Create a Project Poster</h5>
               <a class="text-uppercase" href="kegiatan3.html">Read More <i class="bi bi-arrow-right"></i></a>
             </div>
           </div>
-        </div>
+        </div>        
       </div>
+      <div class="container pt-5 text-center wow slideInUp" style="position: relative; z-index: 50; margin-top: -15px;" data-wow-delay="0.3s">
+        <div class="d-grid gap-2" style="width: 500px; margin: 0 auto;">
+          <a href="kategorikegiatan1.html" class="shadow btn btn-lg" target="_blank" type="button" style="color: rgb(255, 255, 255); background-color:#517fb8">Lainnya <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>      
     </div>
   </div>
 
+
   <!-- Kemitraan Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -80px; margin-bottom: -90px;">
+  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="margin-top: -100px; margin-bottom: -90px;">
     <div class="container py-5">
       <div class="section-title text-center position-relative pb-3 mb-5">
-        <h1 class="mb-0">KEMITRAAN</h1>
+        <h2 class="mb-0">KEMITRAAN</h2>
       </div>
       <div class="owl-carousel owl-theme slideInUp">
         <img src="Asset/kemitraan/logo-bps-1.jpg" alt="img">
