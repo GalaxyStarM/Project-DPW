@@ -11,14 +11,16 @@ section {
   padding: 0px;
 }
 
-
-
-/* @media (min-width: 500px) and (max-width: 780px){
+@media (min-width: 500px) and (max-width: 780px){
   .title-prodi h4{
     font-size: 10px;
-    left: 20px;
+    margin-left: 0px;
   }
-} */
+}
+
+.navbar-kotak-logo .img-responsive{
+ height: 100px;
+}
 
 .clear {
   display: block;
@@ -92,26 +94,6 @@ nav {
     margin-top: -20px;
     background: none;
   }
-
-  .navbar-kotak-logo {
-      width: 124px;
-      height: 124px;
-      padding: 12px;
-      position: relative;
-      left: 0;
-      z-index: 99;
-      background-color: #091E3E;
-    }
-
-  #segitiga-navbar {
-    height: 0px;
-    width: 0px;
-    margin-left: -12px;
-    margin-top: 12px;
-    border-top: solid 40px #091E3E;
-    border-left: solid 63px transparent;
-    border-right: solid 63px transparent;
-  }
 }
 
 .navbar-kotak-logo {
@@ -154,6 +136,35 @@ nav {
 }
 
 @media only screen and (max-width: 771px) {
+  #segitiga-navbar {
+    height: 0px;
+    width: 0px;
+    margin-left: -12px;
+    margin-top: 8px;
+    border-top: solid 22px #091E3E;
+    border-left: solid 43px transparent;
+    border-right: solid 43px transparent;
+  }
+  .navbar-kotak-logo {
+    width: 85px;
+    height: 85px;
+    padding: 12px;
+    position: relative;
+    left: 0;
+    z-index: 99;
+    background-color: #091E3E;
+  }
+
+  .navbar-kotak-logo .img-responsive{
+    height: 65px;
+  }
+
+  .title-prodi{
+    float: left;
+  }
+  .title-prodi h4{
+    font-size: medium;
+  }
 .kegiatan {
   background-color: #e3e3e3e3;
   /* padding: 200px 0; */
