@@ -34,6 +34,164 @@
   ul{list-style: none;}
   li{list-style: none;}
 </style>
+<style>
+  .page-header {
+        background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)), url(../img/carousel-1.jpg) center center no-repeat;
+        background-size: cover;
+    }
+
+    .page-header .breadcrumb-item+.breadcrumb-item::before {
+        color: #999999;
+    }
+
+
+    /*** Facts ***/
+    .facts-overlay {
+        position: absolute;
+        padding: 30px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: rgba(0, 0, 0, .65);
+    }
+
+    .facts-overlay h1 {
+        font-size: 120px;
+        color: transparent;
+        -webkit-text-stroke: 2px var(--primary);
+    }
+
+    .facts-overlay a:hover {
+        color: var(--primary) !important;
+    }
+
+
+    /*** Team ***/
+    .team-text {
+        position: absolute;
+        width: 75%;
+        bottom: 30px;
+        left: 0;
+        transition: .5s;
+    }
+
+    .team-item:hover .team-text {
+        width: 100%;
+    }
+
+    .team-text * {
+        transition: .5s;
+    }
+
+    .team-item:hover .team-text * {
+        letter-spacing: 2px;
+    }
+
+    #gtco-features,
+    #gtco-features-2,
+    #gtco-products,
+    #gtco-services,
+    #gtco-subscribe,
+    #gtco-footer,
+    .gtco-section {
+    padding: 7em 0;
+    clear: both;
+    position: relative;
+    }
+    @media screen and (max-width: 768px) {
+    #gtco-features,
+    #gtco-features-2,
+    #gtco-products,
+    #gtco-services,
+    #gtco-subscribe,
+    #gtco-footer,
+    .gtco-section {
+        padding: 2em 0;
+    }
+    }
+    #gtco-features.border-bottom,
+    #gtco-features-2.border-bottom,
+    #gtco-products.border-bottom,
+    #gtco-services.border-bottom,
+    #gtco-subscribe.border-bottom,
+    #gtco-footer.border-bottom,
+    .gtco-section.border-bottom {
+    border-bottom: 1px solid #e6e6e6;
+    }
+
+    #gtco-features {
+    background: #FBB448;
+    }
+    #gtco-features .gtco-heading h2 {
+    color: #fff;
+    }
+    #gtco-features .gtco-heading p {
+    color: rgba(255, 255, 255, 0.7);
+    }
+    #gtco-features .feature-center {
+    color: #fff;
+    }
+    #gtco-features .feature-center .icon {
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: #FBB448;
+    }
+    #gtco-features .feature-center .icon i {
+    color: #fff;
+    font-size: 40px;
+    font-style: normal;
+    }
+    #gtco-features .feature-center h3 {
+    font-weight: 400;
+    color: #fff;
+    }
+    #gtco-features .feature-center p {
+    color: rgba(255, 255, 255, 0.7);
+    }
+
+    #gtco-features-2 {
+    background: #efefef;
+    position: relative;
+    float: left;
+    width: 100%;
+    }
+    .destination-item img {
+    transition: .5s;
+    }
+
+    .destination-item:hover img {
+    transform: scale(1.3);
+    }
+
+    .destination-overlay {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: .5s;
+    z-index: 1;
+    }
+
+    .destination-item:hover .destination-overlay {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    border-width: 30px;
+    }
+</style>
 
 <body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
   <!-- Spinner Start -->
@@ -204,31 +362,72 @@
   <div class="row py-5">
       <div class="col-12 pt-lg-5 mt-lg-5 text-center">
           <h1 class="display-4 text-white animated zoomIn">Foto</h1>
-          <a href="" class="h5 text-white">Home</a>
+          <a href="index.html" class="h5 text-white">Home</a>
           <i class="far fa-circle text-white px-2"></i>
-          <a href="" class="h5 text-white">Foto</a>
+          <a href="foto.html" class="h5 text-white">Foto</a>
       </div>
   </div>
 </div>
 
-  <!-- Vendor Start -->
-  <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5 mb-5">
-        <div class="bg-white">
-            <div class="owl-carousel vendor-carousel">
-              <img src="Asset/kemitraan/logo-bps-1.jpg" alt="img">
-              <img src="Asset/kemitraan/logo-cisco.jpg" alt="img">
-              <img src="Asset/kemitraan/logo-esri-1.jpg" alt="img">
-              <img src="Asset/kemitraan/logo-kemenkominfo.jpg" alt="img">
-              <img src="Asset/kemitraan/logo-microsoft.jpg" alt="img">
-              <img src="Asset/kemitraan/logo-mikrotik.jpg" alt="img">
-              <img src="Asset/kemitraan/logo-oracle.jpg" alt="img">
-              <img src="Asset/kemitraan/logo-redhat-1.jpg" alt="img">
-            </div>
-        </div>
-    </div>
+<div class="container-fluid py-5">
+  <div class="container pt-5 pb-3">
+    <div class="border-start border-5 border-primary ps-4 mb-5">
+      <h4 class="display-6 mb-0">Akreditasi</h4>
+      </div>
+      <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="destination-item position-relative overflow-hidden mb-2">
+                  <img class="img-fluid" src="Asset/foto/DSC_1825.jpg" alt="">
+                  <a class="destination-overlay text-white text-decoration-none" href="">
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="destination-item position-relative overflow-hidden mb-2">
+                  <img class="img-fluid" src="Asset/foto/DSC_1932.jpg" alt="">
+                  <a class="destination-overlay text-white text-decoration-none" href="">
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="destination-item position-relative overflow-hidden mb-2">
+                  <img class="img-fluid" src="Asset/foto/DSC_1932.jpg" alt="">
+                  <a class="destination-overlay text-white text-decoration-none" href="">
+                  </a>
+              </div>
+          </div>
+      </div>
   </div>
-  <!-- Vendor End -->
+  <div class="container pt-5 pb-3">
+    <div class="border-start border-5 border-primary ps-4 mb-5">
+      <h4 class="display-6 mb-0">Mikrotik Academy</h4>
+      </div>
+      <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="destination-item position-relative overflow-hidden mb-2">
+                  <img class="img-fluid" src="Asset/foto/mikrotik-1.jpeg" alt="">
+                  <a class="destination-overlay text-white text-decoration-none" href="">
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="destination-item position-relative overflow-hidden mb-2">
+                  <img class="img-fluid" src="Asset/foto/mikrotik-2.jpeg" alt="">
+                  <a class="destination-overlay text-white text-decoration-none" href="">
+                  </a>
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+              <div class="destination-item position-relative overflow-hidden mb-2">
+                  <img class="img-fluid" src="Asset/foto/mikrotik-33.jpeg" alt="">
+                  <a class="destination-overlay text-white text-decoration-none" href="">
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Destination Start -->
 
   <!-- Footer -->
   <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s" style="position: relative; z-index: 50;">
