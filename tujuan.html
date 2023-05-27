@@ -127,14 +127,26 @@
   <!-- Topbar End -->
 
   <!-- Navbar Start -->
-    <div class="container-fluid position-relative p-0">
-    <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+  <div class="container-fluid position-relative p-0">
+    <nav
+      id="botnav"
+      class="navbar navbar-expand-lg navbar-dark px-3 py-0"
+    >
+    <div style="display: flex; justify-content: space-between;">
       <div class="navbar-kotak-logo">
-        <a href="index.html">
-          <img src="Asset/logounriputih.png" alt="Universitas Riau" class="img-responsive" style="height: 100px;">
+        <a href="index.html" >
+          <img src="Asset/logounriputih.png" alt="Universitas Riau" class="img-responsive">
         </a>
         <div class="d-none d-lg-block" id="segitiga-navbar"></div>
       </div>
+      <div class="title-prodi">
+        <h4>
+          PROGRAM STUDI <br />
+          S1 TEKNIK <br />
+          INFORMATIKA
+        </h4>
+      </div>
+    </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>
         </button>
@@ -503,13 +515,26 @@
     new WOW().init();
   
     // Sticky Navbar
-      $(window).scroll(function () {
+$(window).scroll(function () {
+        if ($(window).width() > 991) {
+          // Tambahkan kondisi lebar layar
           if ($(this).scrollTop() > 45) {
-              $('.navbar').addClass('sticky-top shadow-sm');
+            $(".navbar").addClass("sticky-top");
+            $(".title-prodi h4").css("position", "static"); // Hapus properti 'position'
           } else {
-              $('.navbar').removeClass('sticky-top shadow-sm');
+            $(".navbar").removeClass("sticky-top");
+            $(".title-prodi h4").css("position", "relative"); // Tambahkan properti 'position' kembali
           }
+        } else {
+          if ($(this).scrollTop() > 45) {
+            $(".navbar").addClass("sticky-top");
+          } else {
+            $(".navbar").removeClass("sticky-top shadow-sm");
+          }
+        }
       });
+    const titleProdi = document.querySelector(".title-prodi h4");
+      titleProdi.style.color = "#fff"; // Warna teks default
       
       // Dropdown di mouse hover
       const $dropdown = $(".dropdown");

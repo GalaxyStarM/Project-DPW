@@ -1,4 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: 'Poppins', sans-serif;
+}
 
 .footer-title {
   border-bottom-width: 2px;
@@ -12,10 +20,7 @@ section {
 }
 
 @media (min-width: 500px) and (max-width: 780px){
-  .title-prodi h4{
-    font-size: 10px;
-    margin-left: 0px;
-  }
+
 }
 
 .navbar-kotak-logo .img-responsive{
@@ -36,17 +41,17 @@ section {
   background-size: cover;
 }
 
-a,
+/* a,
 a:visited {
   color: #000;
   outline: none;
   text-decoration: none;
-}
+} */
 
 nav {
-    display: block;
-    background: transparent;
-    width: 100%;
+  display: block;
+  background: transparent;
+  width: 100%;
 }
 
 .dropdown .dropdown-menu{
@@ -82,17 +87,14 @@ nav {
   display: block;
 }
 
-@media only screen and (max-width:1000px) {
+@media only screen and (max-width:991px) {
   .dropend:hover > .dropdown-menu{
     position: absolute;
     top: 0;
     left: 100%;
   }
-
-  nav {
-    margin-bottom: -20px;
-    margin-top: -20px;
-    background: none;
+  #botnav{
+    background: #061429;
   }
 }
 
@@ -135,7 +137,25 @@ nav {
   padding: 10px;
 }
 
-@media only screen and (max-width: 771px) {
+@media only screen and (max-width: 420px) {
+  .navbar-kotak-logo {
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+    position: relative;
+    left: 0;
+    z-index: 99;
+    background-color: #091E3E;
+  }
+  .navbar-kotak-logo .img-responsive{
+    height: 70px;
+  }
+  .title-prodi h4 {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 771px) and (min-width: 421px) {
   #segitiga-navbar {
     height: 0px;
     width: 0px;
@@ -146,8 +166,8 @@ nav {
     border-right: solid 43px transparent;
   }
   .navbar-kotak-logo {
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
     padding: 12px;
     position: relative;
     left: 0;
@@ -156,15 +176,12 @@ nav {
   }
 
   .navbar-kotak-logo .img-responsive{
-    height: 65px;
+    height: 75px;
   }
-
-  .title-prodi{
-    float: left;
+  .title-prodi h4 {
+    font-size: large;
   }
-  .title-prodi h4{
-    font-size: medium;
-  }
+}  
 .kegiatan {
   background-color: #e3e3e3e3;
   /* padding: 200px 0; */
@@ -367,4 +384,4 @@ span .overlay {
 .kontak{
   background-color: #E3E3E3E3;
 }
-}
+
