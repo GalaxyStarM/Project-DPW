@@ -116,11 +116,11 @@
          */
     </style>
     <style>
-            .custom1 {
-         margin-left: auto !important;
-         margin-right: auto !important;
-         margin: 20px;
-         padding: 20px;
+      .custom1 {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin: 20px;
+        padding: 20px;
       }
       .custom2 {
         position: relative;
@@ -142,7 +142,6 @@
         max-height: 700px;
         overflow: hidden;
       }
-
     </style>
 
     <!-- Spinner Start -->
@@ -219,25 +218,26 @@
 
     <!-- Navbar Start -->
     <div class="container-fluid position-relative p-0">
-      <nav
-        id="botnav"
-        class="navbar navbar-expand-lg navbar-dark px-5 py-0"
-      >
-      <div style="display: flex; justify-content: space-between;">
-        <div class="navbar-kotak-logo">
-          <a href="index.html" >
-            <img src="Asset/logounriputih.png" alt="Universitas Riau" class="img-responsive">
-          </a>
-          <div class="d-none d-lg-block" id="segitiga-navbar"></div>
+      <nav id="botnav" class="navbar navbar-expand-lg navbar-dark px-3 py-0">
+        <div style="display: flex; justify-content: space-between">
+          <div class="navbar-kotak-logo">
+            <a href="index.html">
+              <img
+                src="Asset/logounriputih.png"
+                alt="Universitas Riau"
+                class="img-responsive"
+              />
+            </a>
+            <div class="d-none d-lg-block" id="segitiga-navbar"></div>
+          </div>
+          <div class="title-prodi">
+            <h4>
+              PROGRAM STUDI <br />
+              S1 TEKNIK <br />
+              INFORMATIKA
+            </h4>
+          </div>
         </div>
-        <div class="title-prodi">
-          <h4>
-            PROGRAM STUDI <br />
-            S1 TEKNIK <br />
-            INFORMATIKA
-          </h4>
-        </div>
-      </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -770,6 +770,8 @@
           }
         }
       });
+      const titleProdi = document.querySelector(".title-prodi h4");
+      titleProdi.style.color = "#fff"; // Warna teks default
 
       const titleProdi = document.querySelector(".title-prodi h4");
       titleProdi.style.color = "#fff"; // Warna teks default

@@ -113,6 +113,14 @@ html {
   }
 }
 
+.link-animated a {
+  transition: 0.5s;
+}
+
+.link-animated a:hover {
+  padding-left: 10px;
+}
+
 .count-digit {
   margin: 5px 0px;
   color: #fff;

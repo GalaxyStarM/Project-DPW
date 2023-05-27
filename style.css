@@ -41,12 +41,12 @@ section {
   background-size: cover;
 }
 
-a,
+/* a,
 a:visited {
   color: #000;
   outline: none;
   text-decoration: none;
-}
+} */
 
 nav {
   display: block;
