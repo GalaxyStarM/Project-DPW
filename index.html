@@ -54,7 +54,7 @@
   <!-- oncontextmenu="return false"
   onkeydown="return false;"
   onmousedown="return false;" -->
-  <body>
+  <body style="background: #ecf2e6">
     <style>
       ul {
         list-style: none;
@@ -215,6 +215,107 @@
       .vertical.carousel .carousel-control-next {
         top: unset;
         bottom: 0;
+      }
+    </style>
+    <style>
+      .kartu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        width: 25em;
+        max-width: 100%;
+        padding: 2em 0;
+        background: linear-gradient(
+          250deg,
+          rgb(64, 83, 111) 0%,
+          rgba(63, 114, 192, 1) 100%
+        );
+        box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.12);
+        transition: all 0.35s ease;
+      }
+
+      .kartu::before,
+      .kartu::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #000;
+        height: 4px;
+      }
+
+      .kartu::before {
+        width: 0;
+        opacity: 0;
+        transition: opacity 0s ease, width 0s ease;
+        transition-delay: 0.5s;
+      }
+
+      .kartu::after {
+        width: 100%;
+        background: white;
+        transition: width 0.5s ease;
+      }
+
+      .kartu .konten {
+        width: 18em;
+        max-width: 80%;
+      }
+
+      .kartu.logo_kons {
+        margin: 0 0 1em;
+        width: 10.625em;
+        transition: all 0.35s ease;
+      }
+
+      .kartu h6 {
+        color: #ffffff;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: 2px;
+      }
+
+      .kartu .hover_konten {
+        overflow: hidden;
+        max-height: 0;
+        transform: translateY(1em);
+        transition: all 0.55s ease;
+      }
+
+      .kartu .hover_konten p {
+        margin: 1.5em 0 0;
+        color: #ffffff;
+        line-height: 1.4em;
+      }
+
+      .kartu:hover {
+        width: 24em;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.12);
+      }
+
+      .kartu:hover::before {
+        width: 100%;
+        opacity: 1;
+        transition: opacity 0.5s ease, width 0.5s ease;
+        transition-delay: 0;
+      }
+
+      .kartu:hover::after {
+        width: 0;
+        opacity: 0;
+        transition: width 0s ease;
+      }
+
+      .kartu:hover .logo_kons {
+        margin-bottom: 0.5em;
+      }
+
+      .kartu:hover .hover_konten {
+        max-height: 10em;
+        transform: none;
       }
     </style>
 
@@ -511,25 +612,6 @@
                 role="button"
                 data-mdb-toggle="dropdown"
                 aria-expanded="false"
-                >TUK
-              </a>
-              <div class="dropdown-menu m-0">
-                <a href="tuk.html" class="dropdown-item"
-                  >Informatika UNRI (BNSP)</a
-                >
-                <a href="mikrotikakademik.html" class="dropdown-item"
-                  >Mikrotik Academy</a
-                >
-              </div>
-            </div>
-            <div class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdownMenuLinkRight"
-                role="button"
-                data-mdb-toggle="dropdown"
-                aria-expanded="false"
                 >Galeri
               </a>
               <div class="dropdown-menu m-0">
@@ -554,7 +636,9 @@
                 <a href="kategoriberita1.html" class="dropdown-item">Berita</a>
                 <a href="kategorikegiatan1.html" class="dropdown-item">Event</a>
                 <a href="kategoriposter.html" class="dropdown-item">Poster</a>
-                <a href="Kpresmahasiswa1.html" class="dropdown-item">Prestasi Mahasiswa</a>
+                <a href="Kpresmahasiswa1.html" class="dropdown-item"
+                  >Prestasi Mahasiswa</a
+                >
               </div>
             </div>
             <a href="kontak.html" class="nav-item nav-link">Kontak</a>
@@ -572,15 +656,11 @@
 
     <!-- Inner bg -->
     <div
-      class="container-fluid bg-primary bg-header py-5"
-      style="margin-bottom: 0px"
+      class="container-fluid bg-primary bg-home py-5"
+      style="margin-bottom: 40px"
     >
-      <div class="row py-5">
-        <div class="col-12 pt-lg-5 mt-lg-5 text-center">
-          <h1 class="display-4 text-white animated zoomIn">
-            Welcome To Informatic Engineering
-          </h1>
-        </div>
+      <div class="logdep">
+        <img src="Asset/logounriputih.png" alt="" />
       </div>
     </div>
 
@@ -739,8 +819,12 @@
       style="
         padding-top: 120px;
         margin-top: -20px;
-        margin-bottom: 60px;
-        background-image: url(img/blue-bg.jpg);
+        margin-bottom: 0px;
+        background: linear-gradient(
+          250deg,
+          rgba(9, 30, 62, 1) 0%,
+          rgba(63, 114, 192, 1) 100%
+        );
       "
       data-stellar-background-ratio="0.5"
       data-wow-delay="0.3s"
@@ -772,6 +856,87 @@
       </div>
     </div>
     <!-- teks end -->
+
+    <!-- Konsentrasi -->
+    <section
+      class="container-fluid mt-0"
+      style="padding: 60px 0px 20px 0px"
+    >
+      <div class="row mb-5">
+        <div
+          class="col-lg-4 col-md-4 col-sm-12"
+          style="display: flex; justify-content: center"
+        >
+          <div class="kartu">
+            <div class="konten">
+              <img
+                class="logo_kons"
+                src="Asset/icon/chip.png"
+                alt="mparticle"
+              />
+              <h6>Komputasi Cerdas dan Visualisasi (KCV)</h6>
+              <div class="hover_konten">
+                <p>
+                  Konsentrasi mata kuliah KCV adalah sebuah fokus dalam program
+                  studi Teknik Informatika atau Ilmu Komputer yang mempelajari
+                  tentang pengolahan citra digital, pengenalan pola, serta
+                  pengembangan teknologi cerdas seperti kecerdasan buatan dan
+                  robotika.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-4 col-md-4 col-sm-12"
+          style="display: flex; justify-content: center"
+        >
+          <div class="kartu">
+            <div class="konten">
+              <img
+                class="logo_kons"
+                src="Asset/icon/engineer.png"
+                alt="mparticle"
+              />
+              <h6>Rekayasa Perangkat Lunak (RPL)</h6>
+              <div class="hover_konten">
+                <p>
+                  Konsentrasi mata kuliah rekayasa perangkat lunak adalah fokus
+                  dalam program studi teknik informatika atau ilmu komputer yang
+                  membahas pengembangan dan perancangan perangkat lunak atau
+                  software baik di dalam platform mobile, desktop, maupun web.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-lg-4 col-md-4 col-sm-12"
+          style="display: flex; justify-content: center"
+        >
+          <div class="kartu">
+            <div class="konten">
+              <img
+                class="logo_kons"
+                src="Asset/icon/local-area-network.png"
+                alt="mparticle"
+              />
+              <h6>Komputasi Berbasis Jaringan (KBJ)</h6>
+              <div class="hover_konten">
+                <p>
+                  Konsentrasi mata kuliah Komputasi Berbasis Jaringan adalah
+                  fokus dalam program studi Teknik Informatika atau Ilmu
+                  Komputer yang mempelajari tentang jaringan komputer,
+                  pengembangan aplikasi jaringan, dan hal lainnya yang terkait
+                  dengan jaringan.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Konsentrasi -->
 
     <!-- Berita Start -->
     <section class="margin-top:50px wow slideInUp" data-wow-delay="0.1s">

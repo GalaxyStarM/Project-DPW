@@ -19,7 +19,7 @@ html {
   font-family: 'Poppins';
   position: relative;
   margin-left: 25px;
-  padding: 20px;
+  padding: 10px;
   color: #FFFFFF;
   font-size: 18px;
   font-weight: 600;
@@ -50,10 +50,43 @@ html {
   color: var(--light) !important;
 }
 
-@media (max-width: 991.98px) {
+@media only screen and (max-width: 1100px) and (min-width: 991px) {
+  #segitiga-navbar {
+    height: 0px;
+    width: 0px;
+    margin-left: -12px;
+    margin-top: 8px;
+    border-top: solid 22px #091E3E;
+    border-left: solid 43px transparent;
+    border-right: solid 43px transparent;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+  .navbar-kotak-logo {
+    width: 100px;
+    height: 100px;
+    padding: 12px;
+    position: relative;
+    left: 0;
+    z-index: 99;
+    background-color: #091E3E;
+  }
+
+  .navbar-kotak-logo .img-responsive{
+    height: 75px;
+  }
+  .title-prodi h4 {
+    font-size: large;
+  }
+}
+
+@media (max-width: 990px) {
   .sticky-top.navbar-dark {
-      position: relative;
-      background: #061429;
+    position: relative;
+    background: #061429;
+    padding-left: 30px;
   }
 
   .navbar-dark .navbar-nav .nav-link,
