@@ -668,13 +668,25 @@
 
       // Sticky Navbar
       $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
-          $(".navbar").addClass("sticky-top shadow-sm");
+        if ($(window).width() > 991) {
+          // Tambahkan kondisi lebar layar
+          if ($(this).scrollTop() > 45) {
+            $(".navbar").addClass("sticky-top");
+            $(".title-prodi h4").css("position", "static"); // Hapus properti 'position'
+          } else {
+            $(".navbar").removeClass("sticky-top");
+            $(".title-prodi h4").css("position", "relative"); // Tambahkan properti 'position' kembali
+          }
         } else {
-          $(".navbar").removeClass("sticky-top shadow-sm");
+          if ($(this).scrollTop() > 45) {
+            $(".navbar").addClass("sticky-top");
+          } else {
+            $(".navbar").removeClass("sticky-top shadow-sm");
+          }
         }
       });
-
+      const titleProdi = document.querySelector(".title-prodi h4");
+      titleProdi.style.color = "#fff"; // Warna teks default
       // Dropdown di mouse hover
       const $dropdown = $(".dropdown");
       const $dropdownToggle = $(".dropdown-toggle");
