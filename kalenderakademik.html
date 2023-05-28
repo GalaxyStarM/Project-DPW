@@ -72,6 +72,21 @@
         height: auto;
       }
     }
+    .responsive-iframe-container {
+      position: relative;
+      overflow: hidden;
+      padding-top: 56.25%; /* Adjust this value to achieve the desired aspect ratio */
+    }
+
+    .responsive-iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
   </style>
 
   <body
@@ -464,9 +479,7 @@
           <h1 class="display-4 text-white animated zoomIn">
             Kalender Akademik
           </h1>
-          <a href="" class="h5 text-white">Home</a>
-          <i class="far fa-circle text-white px-2"></i>
-          <a href="" class="h5 text-white">Kalender Akademik</a>
+          
         </div>
       </div>
     </div>
@@ -478,142 +491,78 @@
             <iframe src="http://informatika.ft.unri.ac.id/wp-content/uploads/4275-Perubahan-Kalender-Akademik-Tahun-20222-2023-26122022.pdf" width=100% height=100%>></iframe>
         </div>  -->
 
-    <div class="kalender" style="position: relative; z-index: 50">
-      <div class="kalender-konten">
-        <embed
-          src="http://informatika.ft.unri.ac.id/wp-content/uploads/Kurikukulum-S1TI-2017218.pdf"
-          type=""
-        />
-      </div>
-    </div>
+        <!-- <div class="kalender" style="position: relative; z-index: 50;">
+          <div class="kalender-konten">
+            <embed src="http://informatika.ft.unri.ac.id/wp-content/uploads/Kurikukulum-S1TI-2017218.pdf" type="">
+          </div>
+        </div> -->
 
-    <!-- Footer -->
-    <div
-      class="container-fluid bg-dark text-light mt-5 wow fadeInUp"
-      data-wow-delay="0.1s"
-      style="position: relative; z-index: 50"
-    >
-      <div class="container">
+        <div class="kuri-kul" style="text-align: center; position: relative; z-index: 50;"><br>
+          <iframe src="//docs.google.com/viewer?url=http%3A%2F%2Finformatika.ft.unri.ac.id%2Fwp-content%2Fuploads%2F4275-Perubahan-Kalender-Akademik-Tahun-20222-2023-26122022.pdf&amp;hl=en_US&amp;embedded=true" class="gde-frame" style="width:100%; height:500px; border: none;" scrolling="no"></iframe>
+          <p class="gde-text">
+            <a href="Asset/kemitraan/kalender akademik.pdf" class="gde-link" target="_top"><strong>Download PDF</strong></a>
+          </p></div>
+        
+        
+  <!-- Footer -->
+  <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s" style="position: relative; z-index: 50;">
+    <div class="container">
         <div class="row gx-5">
-          <div class="col-lg-4 col-md-6 footer-about">
-            <div
-              class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4"
-            >
-              <img
-                src="Asset/logounriputih.png"
-                alt=""
-                style="width: 60%; height: auto"
-              />
+            <div class="col-lg-4 col-md-6 footer-about">
+                <div class="d-flex flex-column align-items-center justify-content-center text-center h-100 bg-primary p-4" >
+                  <img src="Asset/logounriputih.png" alt="" style="width: 60%; height:auto">
+                </div>
             </div>
-          </div>
-          <div class="col-lg-8 col-md-6">
-            <div class="row gx-5">
-              <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                <div
-                  class="section-title section-title-sm position-relative pb-3 mb-4"
-                >
-                  <h4 class="text-light mb-0">Kontak</h4>
+            <div class="col-lg-8 col-md-6">
+                <div class="row gx-5">
+                    <div class="col-lg-4 col-md-12 pt-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h4 class="text-light mb-0">Kontak</h4>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-geo-alt text-primary me-2"></i>
+                            <p class="mb-0">Gedung C lantai 2 Fakultas Teknik Universitas Riau Kampus Binawidya Jl. HR Soebrantas KM. 12,5 Simpang Baru, Binawidya.</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-envelope-open text-primary me-2"></i>
+                            <p class="mb-0">informatika@eng.unri.ac.id</p>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="bi bi-telephone text-primary me-2"></i>
+                            <p class="mb-0">(+62761)66596</p>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <a class="btn btn-primary btn-square me-2" href="https://wa.me/6276166596"><i class="fab fa-whatsapp fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square me-2" href="https://web.facebook.com/informatics.unri/?_rdc=1&_rdr"><i class="fab fa-facebook-f fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square me-2" href="https://id.linkedin.com/school/universitas-riau-unri-/?trk=public_profile_topcard-school"><i class="fab fa-linkedin-in fw-normal"></i></a>
+                            <a class="btn btn-primary btn-square" href="https://instagram.com/informatika_ur?igshid=NTc4MTIwNjQ2YQ=="><i class="fab fa-instagram fw-normal"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h4 class="text-light mb-0">S1 Teknik Informatika</h4>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                            <a class="text-light mb-2" href="kategoriberita1.html"><i class="bi bi-arrow-right text-primary me-2"></i>Berita</a>
+                            <a class="text-light mb-2" href="kategorikegiatan1.html"><i class="bi bi-arrow-right text-primary me-2"></i>Event</a>
+                            <a class="text-light mb-2" href="kategoriposter.html"><i class="bi bi-arrow-right text-primary me-2"></i>Poster Mahasiswa</a>
+                            <a class="text-light mb-2" href="Kprestasimahasiswa.html"><i class="bi bi-arrow-right text-primary me-2"></i>Prestasi Mahasiswa</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h4 class="text-light mb-0">Link Terkait</h4>
+                        </div>
+                        <div class="link-animated d-flex flex-column justify-content-start">
+                          <a class="text-light mb-2" href="https://sitei.ft.unri.ac.id/"><i class="bi bi-arrow-right text-primary me-2"></i>SITEI(Akademik)</a>
+                            <a class="text-light mb-2" href="https://kemahasiswaan.unri.ac.id/news/category/Beasiswa"><i class="bi bi-arrow-right text-primary me-2"></i>Beasiswa</a>
+                            <a class="text-light mb-2" href="https://iconeei.id/"><i class="bi bi-arrow-right text-primary me-2"></i>Konferensi Internasional</a>
+                            <a class="text-light mb-2" href="https://drive.google.com/open?id=1UYZwySIeqpyxSBateBZWbia6V8wjg4tO&authuser=informatika%40eng.unri.ac.id&usp=drive_fs"><i class="bi bi-arrow-right text-primary me-2"></i>Tracer Study</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="d-flex mb-2">
-                  <i class="bi bi-geo-alt text-primary me-2"></i>
-                  <p class="mb-0">
-                    Gedung C lantai 2 Fakultas Teknik Universitas Riau Kampus
-                    Binawidya Jl. HR Soebrantas KM. 12,5 Simpang Baru,
-                    Binawidya.
-                  </p>
-                </div>
-                <div class="d-flex mb-2">
-                  <i class="bi bi-envelope-open text-primary me-2"></i>
-                  <p class="mb-0">informatika@eng.unri.ac.id</p>
-                </div>
-                <div class="d-flex mb-2">
-                  <i class="bi bi-telephone text-primary me-2"></i>
-                  <p class="mb-0">(+62761)66596</p>
-                </div>
-                <div class="d-flex mt-4">
-                  <a
-                    class="btn btn-primary btn-square me-2"
-                    href="https://wa.me/6276166596"
-                    ><i class="fab fa-whatsapp fw-normal"></i
-                  ></a>
-                  <a
-                    class="btn btn-primary btn-square me-2"
-                    href="https://web.facebook.com/informatics.unri/?_rdc=1&_rdr"
-                    ><i class="fab fa-facebook-f fw-normal"></i
-                  ></a>
-                  <a
-                    class="btn btn-primary btn-square me-2"
-                    href="https://id.linkedin.com/school/universitas-riau-unri-/?trk=public_profile_topcard-school"
-                    ><i class="fab fa-linkedin-in fw-normal"></i
-                  ></a>
-                  <a
-                    class="btn btn-primary btn-square"
-                    href="https://instagram.com/informatika_ur?igshid=NTc4MTIwNjQ2YQ=="
-                    ><i class="fab fa-instagram fw-normal"></i
-                  ></a>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                <div
-                  class="section-title section-title-sm position-relative pb-3 mb-4"
-                >
-                  <h4 class="text-light mb-0">S1 Teknik Informatika</h4>
-                </div>
-                <div
-                  class="link-animated d-flex flex-column justify-content-start"
-                >
-                  <a class="text-light mb-2" href="kategoriberita1.html"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i
-                    >Berita</a
-                  >
-                  <a class="text-light mb-2" href="kategorikegiatan1.html"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i>Event</a
-                  >
-                  <a class="text-light mb-2" href="kategoriposter.html"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i>Poster
-                    Mahasiswa</a
-                  >
-                  <a class="text-light mb-2" href="Kprestasimahasiswa.html"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i>Prestasi
-                    Mahasiswa</a
-                  >
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                <div
-                  class="section-title section-title-sm position-relative pb-3 mb-4"
-                >
-                  <h4 class="text-light mb-0">Link Terkait</h4>
-                </div>
-                <div
-                  class="link-animated d-flex flex-column justify-content-start"
-                >
-                  <a class="text-light mb-2" href="https://sitei.ft.unri.ac.id/"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i
-                    >SITEI(Akademik)</a
-                  >
-                  <a
-                    class="text-light mb-2"
-                    href="https://kemahasiswaan.unri.ac.id/news/category/Beasiswa"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i
-                    >Beasiswa</a
-                  >
-                  <a class="text-light mb-2" href="https://iconeei.id/"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i
-                    >Konferensi Internasional</a
-                  >
-                  <a
-                    class="text-light mb-2"
-                    href="https://drive.google.com/open?id=1UYZwySIeqpyxSBateBZWbia6V8wjg4tO&authuser=informatika%40eng.unri.ac.id&usp=drive_fs"
-                    ><i class="bi bi-arrow-right text-primary me-2"></i>Tracer
-                    Study</a
-                  >
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- Copyright -->
@@ -701,27 +650,28 @@
       const $dropdownToggle = $(".dropdown-toggle");
       const $dropdownMenu = $(".dropdown-menu");
       const showClass = "show";
-
-      $(window).on("load resize", function () {
-        if (this.matchMedia("(min-width: 992px)").matches) {
-          $dropdown.hover(
-            function () {
-              const $this = $(this);
-              $this.addClass(showClass);
-              $this.find($dropdownToggle).attr("aria-expanded", "true");
-              $this.find($dropdownMenu).addClass(showClass);
-            },
-            function () {
-              const $this = $(this);
-              $this.removeClass(showClass);
-              $this.find($dropdownToggle).attr("aria-expanded", "false");
-              $this.find($dropdownMenu).removeClass(showClass);
-            }
-          );
-        } else {
-          $dropdown.off("mouseenter mouseleave");
-        }
+      
+      $(window).on("load resize", function() {
+          if (this.matchMedia("(min-width: 992px)").matches) {
+              $dropdown.hover(
+              function() {
+                  const $this = $(this);
+                  $this.addClass(showClass);
+                  $this.find($dropdownToggle).attr("aria-expanded", "true");
+                  $this.find($dropdownMenu).addClass(showClass);
+              },
+              function() {
+                  const $this = $(this);
+                  $this.removeClass(showClass);
+                  $this.find($dropdownToggle).attr("aria-expanded", "false");
+                  $this.find($dropdownMenu).removeClass(showClass);
+              }
+              );
+          } else {
+              $dropdown.off("mouseenter mouseleave");
+          }
       });
-    </script>
-  </body>
+  </script>
+   </body>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 </html>
